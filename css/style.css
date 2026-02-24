@@ -12,7 +12,7 @@ body {
 
 header {
     background-color: var(--primary-color);
-    color: white;
+    color: blue;
     padding: 20px;
 }
 
