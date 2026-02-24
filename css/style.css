@@ -50,7 +50,7 @@ footer {
 }
 
 .btn-outline {
-  background-color: transparent;
+  background-color: blue;
   border: 2px solid var(--primary-color);
   color: var(--primary-color);
 }
