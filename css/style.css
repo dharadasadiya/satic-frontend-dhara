@@ -1,7 +1,10 @@
+/* Variables */
 :root {
     --primary-color: #4f46e5;
     --bg-color: #f4f4f4;
 }
+
+/* Body */
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
@@ -10,69 +13,78 @@ body {
     text-align: center;
 }
 
+/* Header */
 header {
     background-color: var(--primary-color);
-    color: blue;
+    color: white;
     padding: 20px;
 }
 
+/* Main */
 main {
     padding: 20px;
 }
 
+/* Footer */
 footer {
     margin-top: 20px;
     padding: 10px;
     background-color: #ddd;
 }
+
+/* Common Button Style */
 .btn {
-  padding: 10px 20px;
-  border-radius: 6px;
-  font-size: 14px;
-  font-weight: 600;
-  border: none;
-  transition: all 0.2s ease;
-  cursor: pointer;
-  margin: 8px;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    border: none;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    margin: 8px;
 }
 
+/* Primary Button (Blue Background + Black Text) */
 .btn-primary {
-  background-color: var(--primary-color);
-  color: black;
+    background-color: var(--primary-color);
+    color: black;
 }
 
 .btn-primary:hover {
-  opacity: 0.9;
+    opacity: 0.9;
 }
 
 .btn-primary:active {
-  transform: scale(0.95);
+    transform: scale(0.95);
 }
 
+/* Outline Button */
 .btn-outline {
-  background-color: blue;
-  border: 2px solid var(--primary-color);
-  color: var(--primary-color);
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
+    color: black;
 }
 
 .btn-outline:hover {
-  background-color: var(--primary-color);
-  color: black;
+    background-color: var(--primary-color);
+    color: black;
 }
 
 .btn-outline:active {
-  transform: scale(0.95);
+    transform: scale(0.95);
 }
 
+/* Disabled State */
 .btn:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
+    opacity: 0.5;
+    cursor: not-allowed;
 }
 
+/* Button Group Layout */
 .button-group {
-  margin-top: 15px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  justify-content: center;
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
 }
