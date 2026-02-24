@@ -1,1 +1,1 @@
-console.log("Website Loaded Successfully!");
+console.log("Day 1 Task Loaded");
