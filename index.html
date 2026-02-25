@@ -1,36 +1,34 @@
 <!DOCTYPE html>
-<html>
+<html lang="gu">
 <head>
-  <title>Dhara Dasadiya</title>
-  <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <title>Day 3 Navbar</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-  <h1>Dhara Dasadiya</h1>
-  <h2>Frontend Intern</h2>
+<header class="site-header">
+  <nav class="navbar">
 
-  <h3>My Frontend Journey</h3>
-  <ul>
-    <li>Day 1: Setup & Deployment (Completed)</li>
-    <li>Day 2: Button Component System (Completed)</li>
-  </ul>
+    <!-- ડાબી બાજુ -->
+    <div class="nav-left">
+      <span class="logo">Dhara Dasadiya</span>
+    </div>
 
-  <h2>Button Component System</h2>
+    <!-- વચ્ચે -->
+    <ul class="nav-center">
+      <li><a href="#" class="nav-link active">Home</a></li>
+      <li><a href="#" class="nav-link">Projects</a></li>
+      <li><a href="#" class="nav-link">Contact</a></li>
+    </ul>
 
-  <h3>Primary Buttons</h3>
-  <button class="btn btn-primary">Default</button>
-  <button class="btn btn-primary" disabled>Disabled</button>
+    <!-- જમણી બાજુ -->
+    <div class="nav-right">
+      <button class="btn-primary">Hire Me</button>
+    </div>
 
-  <h3>Secondary Buttons</h3>
-  <button class="btn btn-outline">Default</button>
-  <button class="btn btn-outline" disabled>Disabled</button>
-
-  <footer>
-    <p>© 2026 Dhara Dasadiya</p>
-  </footer>
-
-  <script src="js/script.js"></script>
+  </nav>
+</header>
 
 </body>
 </html>
