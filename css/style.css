@@ -1,20 +1,105 @@
-.site-header {
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f6f8;
+}
+
+/* HEADER */
+header {
   width: 100%;
-  background: #fff;
+  background: #ffffff;
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
+/* FLEXBOX NAVBAR */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 18px 60px;
+  padding: 15px 60px;
 }
 
+/* LOGO */
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: #3498db;
+}
+
+/* NAV LINKS */
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 40px;
+  gap: 30px;
   margin: 0;
   padding: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #3498db;
+}
+
+.nav-links a.active {
+  color: #3498db;
+  border-bottom: 2px solid #3498db;
+}
+
+/* CONTAINER */
+.container {
+  padding: 40px 60px;
+}
+
+/* CARD */
+.card {
+  background: white;
+  padding: 20px;
+  margin-bottom: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+/* BUTTON GROUP */
+.button-group {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+/* PRIMARY BUTTON (Day 2 Reuse) */
+.btn-primary {
+  background: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  background: #2980b9;
+}
+
+.btn-primary:active {
+  transform: scale(0.95);
+}
+
+.btn-primary:disabled {
+  background: #cccccc;
+  cursor: not-allowed;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 15px;
+  background: #3498db;
+  color: white;
 }
