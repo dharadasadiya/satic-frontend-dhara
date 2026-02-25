@@ -1,66 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Static Frontend Internship</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>Dhara Dasadiya</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<!-- ================= Day 3: Navbar ================= -->
-<header class="site-header">
-  <nav class="navbar">
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <h2>Dhara Dasadiya</h2>
 
-    <div class="nav-left">
-      <span class="logo">Dhara Dasadiya</span>
-    </div>
-
-    <ul class="nav-center">
-      <li><a href="#" class="active">Home</a></li>
-      <li><a href="#">Projects</a></li>
-      <li><a href="#">Contact</a></li>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
 
-    <div class="nav-right">
-      <button class="btn-primary">Hire Me</button>
-    </div>
+    <!-- CLICKABLE BUTTON -->
+    <a href="#contact" class="btn-primary">Hire Me</a>
+  </header>
 
-  </nav>
-</header>
+  <!-- HOME -->
+  <section id="home">
+    <h3>My Frontend Journey</h3>
+    <ul>
+      <li>Day 1: Setup & Deployment (Completed)</li>
+    </ul>
+  </section>
 
-<!-- ================= Day 1 ================= -->
-<section class="card">
-  <h3>My Frontend Journey</h3>
-  <ul>
-    <li>Day 1: Setup & Deployment (Completed)</li>
-  </ul>
-</section>
+  <!-- DAY 2 -->
+  <section id="projects">
+    <h3>Day 2: Button Component System</h3>
 
-<!-- ================= Day 2 ================= -->
-<section class="card">
-  <h2>Day 2: Button Component System</h2>
-
-  <div class="button-row">
-    <span>Primary Buttons</span>
+    <p>Primary Buttons</p>
     <button class="btn-primary">Default</button>
     <button class="btn-primary hover">Hover</button>
     <button class="btn-primary active">Active</button>
-    <button class="btn-primary disabled">Disabled</button>
-  </div>
+    <button class="btn-primary disabled" disabled>Disabled</button>
 
-  <div class="button-row">
-    <span>Secondary Buttons (Outline)</span>
+    <p>Secondary Buttons (Outline)</p>
     <button class="btn-secondary">Default</button>
     <button class="btn-secondary hover">Hover</button>
     <button class="btn-secondary active">Active</button>
-    <button class="btn-secondary disabled">Disabled</button>
-  </div>
-</section>
+    <button class="btn-secondary disabled" disabled>Disabled</button>
+  </section>
 
-<!-- ================= Footer ================= -->
-<footer class="footer">
-  © 2024 Dhara Dasadiya
-</footer>
+  <!-- CONTACT -->
+  <section id="contact">
+    <h3>Contact Me</h3>
+    <p>Email: dhara@email.com</p>
+  </section>
+
+  <footer>
+    © 2024 Dhara Dasadiya
+  </footer>
 
 </body>
 </html>
