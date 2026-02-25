@@ -1,61 +1,101 @@
-/* ===== Navbar ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* ================= Navbar ================= */
 .site-header {
-  width: 100%;
-  background-color: #f4f6f8;
+  background: #f4f6f8;
   border-bottom: 1px solid #ddd;
 }
 
 .navbar {
-  max-width: 1200px;
-  margin: 0 auto;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   padding: 14px 24px;
 }
 
-/* Left */
 .logo {
-  font-size: 18px;
+  color: #2563eb;
   font-weight: 600;
-  color: #1f2937;
 }
 
-/* Center */
 .nav-center {
   display: flex;
-  gap: 32px;
+  gap: 30px;
   list-style: none;
-  margin: 0;
-  padding: 0;
 }
 
 .nav-center a {
   text-decoration: none;
-  font-size: 15px;
-  color: #374151;
+  color: #333;
 }
 
+.nav-center a.active,
 .nav-center a:hover {
-  color: #2563eb;
+  text-decoration: underline;
 }
 
-.nav-center a.active {
-  color: #2563eb;
-  border-bottom: 2px solid #2563eb;
-  padding-bottom: 4px;
-}
-
-/* Button (Day 2 reuse allowed) */
 .btn-primary {
-  background-color: #2563eb;
-  color: white;
+  background: #2563eb;
+  color: #fff;
   border: none;
   padding: 8px 16px;
-  border-radius: 6px;
+  border-radius: 4px;
   cursor: pointer;
 }
 
-.btn-primary:hover {
-  background-color: #1d4ed8;
+/* ================= Cards ================= */
+.card {
+  margin: 20px;
+  padding: 16px;
+  background: #fff;
+  border-radius: 6px;
+  border: 1px solid #e5e7eb;
+}
+
+.card ul {
+  margin-left: 20px;
+}
+
+/* ================= Day 2 Buttons ================= */
+.button-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.btn-primary.hover { opacity: 0.9; }
+.btn-primary.active { background: #1d4ed8; }
+.btn-primary.disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+}
+
+.btn-secondary {
+  background: transparent;
+  border: 1px solid #2563eb;
+  color: #2563eb;
+  padding: 6px 14px;
+  border-radius: 4px;
+}
+
+.btn-secondary.hover { background: #e0e7ff; }
+.btn-secondary.active { background: #2563eb; color: #fff; }
+.btn-secondary.disabled {
+  border-color: #9ca3af;
+  color: #9ca3af;
+}
+
+/* ================= Footer ================= */
+.footer {
+  background: #2563eb;
+  color: #fff;
+  text-align: center;
+  padding: 12px;
+  margin-top: 20px;
 }
