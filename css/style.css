@@ -1,101 +1,83 @@
-* {
+body {
+  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
 }
 
-/* ================= Navbar ================= */
-.site-header {
-  background: #f4f6f8;
-  border-bottom: 1px solid #ddd;
-}
-
+/* NAVBAR */
 .navbar {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 14px 24px;
+  justify-content: space-between;
+  padding: 15px 20px;
+  background: #f5f5f5;
 }
 
-.logo {
-  color: #2563eb;
-  font-weight: 600;
-}
-
-.nav-center {
-  display: flex;
-  gap: 30px;
+.nav-links {
   list-style: none;
+  display: flex;
+  gap: 15px;
 }
 
-.nav-center a {
+.nav-links a {
   text-decoration: none;
   color: #333;
 }
 
-.nav-center a.active,
-.nav-center a:hover {
-  text-decoration: underline;
-}
-
+/* BUTTONS */
 .btn-primary {
-  background: #2563eb;
-  color: #fff;
+  background: #0d6efd;
+  color: white;
   border: none;
-  padding: 8px 16px;
-  border-radius: 4px;
+  padding: 8px 14px;
+  border-radius: 5px;
   cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
 }
 
-/* ================= Cards ================= */
-.card {
-  margin: 20px;
-  padding: 16px;
-  background: #fff;
-  border-radius: 6px;
-  border: 1px solid #e5e7eb;
+.btn-primary.hover {
+  background: #0b5ed7;
 }
 
-.card ul {
-  margin-left: 20px;
+.btn-primary.active {
+  background: #084298;
 }
 
-/* ================= Day 2 Buttons ================= */
-.button-row {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-top: 12px;
-}
-
-.btn-primary.hover { opacity: 0.9; }
-.btn-primary.active { background: #1d4ed8; }
 .btn-primary.disabled {
-  background: #9ca3af;
+  background: #9ec5fe;
   cursor: not-allowed;
 }
 
+/* SECONDARY */
 .btn-secondary {
   background: transparent;
-  border: 1px solid #2563eb;
-  color: #2563eb;
-  padding: 6px 14px;
-  border-radius: 4px;
+  color: #0d6efd;
+  border: 2px solid #0d6efd;
+  padding: 6px 12px;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-.btn-secondary.hover { background: #e0e7ff; }
-.btn-secondary.active { background: #2563eb; color: #fff; }
+.btn-secondary.hover {
+  background: #e7f1ff;
+}
+
+.btn-secondary.active {
+  background: #cfe2ff;
+}
+
 .btn-secondary.disabled {
-  border-color: #9ca3af;
-  color: #9ca3af;
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
-/* ================= Footer ================= */
-.footer {
-  background: #2563eb;
-  color: #fff;
+/* SECTIONS */
+section {
+  padding: 20px;
+}
+
+footer {
+  padding: 10px;
   text-align: center;
-  padding: 12px;
-  margin-top: 20px;
 }
