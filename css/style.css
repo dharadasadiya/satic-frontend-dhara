@@ -1,112 +1,66 @@
-* {
+body {
   margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  font-family: serif;
 }
 
 body.no-scroll {
   overflow: hidden;
 }
 
-/* NAVBAR */
 .navbar {
-  width: 100%;
-  background: #f4f6f8;
   border-bottom: 1px solid #ccc;
+  padding: 10px;
 }
 
-.nav-container {
-  max-width: 1100px;
-  margin: auto;
-  padding: 16px;
+.top {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
+  gap: 6px;
 }
 
-.logo {
+.name {
   font-size: 18px;
-  font-weight: bold;
 }
 
-/* DESKTOP NAV */
 .nav-links {
   display: flex;
-  gap: 20px;
+  gap: 10px;
 }
 
 .nav-links a {
-  text-decoration: none;
-  color: #333;
-  font-weight: 500;
+  color: blue;
+  text-decoration: underline;
+  font-size: 14px;
 }
 
-.cta {
-  background: #2b6cb0;
-  color: #fff !important;
-  padding: 8px 14px;
-  border-radius: 4px;
-}
-
-/* HAMBURGER */
+/* Hamburger */
 .hamburger {
   display: none;
+  font-size: 18px;
   background: none;
   border: none;
   cursor: pointer;
 }
 
-.hamburger span {
-  display: block;
-  width: 24px;
-  height: 3px;
-  background: #333;
-  margin: 5px 0;
-  transition: 0.3s;
+/* CONTENT */
+.content {
+  padding: 16px;
 }
 
-/* MOBILE VIEW */
+/* MOBILE */
 @media (max-width: 768px) {
   .hamburger {
     display: block;
+    align-self: flex-end;
   }
 
   .nav-links {
-    position: fixed;
-    inset: 0;
-    background: #fff;
+    display: none;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 30px;
-    transform: translateY(-100%);
-    transition: transform 0.4s ease;
+    gap: 8px;
   }
 
   .navbar.nav-open .nav-links {
-    transform: translateY(0);
+    display: flex;
   }
-
-  /* X ICON */
-  .navbar.nav-open .hamburger span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-  }
-
-  .navbar.nav-open .hamburger span:nth-child(2) {
-    opacity: 0;
-  }
-
-  .navbar.nav-open .hamburger span:nth-child(3) {
-    transform: rotate(-45deg) translate(6px, -6px);
-  }
-}
-
-/* CONTENT */
-.content {
-  padding: 40px;
-}
-
-section {
-  margin-bottom: 60px;
 }
