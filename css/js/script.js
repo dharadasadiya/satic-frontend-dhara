@@ -1,11 +1,15 @@
-console.log("Day 2 Loaded");
+const navbar = document.querySelector(".navbar");
+const hamburger = document.querySelector(".hamburger");
+const links = document.querySelectorAll(".nav-links a");
 
-const buttons = document.querySelectorAll(".btn");
+hamburger.addEventListener("click", () => {
+  navbar.classList.toggle("nav-open");
+  document.body.classList.toggle("no-scroll");
+});
 
-buttons.forEach(function(btn) {
-  btn.addEventListener("click", function() {
-    if (!btn.disabled) {
-      console.log(btn.innerText + " button clicked");
-    }
+links.forEach(link => {
+  link.addEventListener("click", () => {
+    navbar.classList.remove("nav-open");
+    document.body.classList.remove("no-scroll");
   });
 });
