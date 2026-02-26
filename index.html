@@ -2,37 +2,55 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Your Name</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dhara Dasadiya</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header class="navbar">
-  <div class="top">
-    <div class="name">Your Name</div>
-
-    <button class="hamburger">☰</button>
-
-    <nav class="nav-links">
-      <a href="#day1">Day 1</a>
-      <a href="#day2">Day 2</a>
-      <a href="#day3">Day 3</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </div>
+  <div class="nav-left">Dhara Dasadiya</div>
+  <button class="hamburger">☰</button>
 </header>
 
-<main class="content">
-  <h2 id="day1">Day 1</h2>
-  <p>Setup & Deployment Completed</p>
+<main class="container">
 
-  <h2 id="day2">Day 2</h2>
-  <p>Button Component System</p>
+  <div class="card">
+    <h3>My Frontend Journey</h3>
+    <ul>
+      <li>Day 1: Setup & Deployment (Completed)</li>
+    </ul>
+  </div>
 
-  <h2 id="day3">Day 3</h2>
-  <p>More Components</p>
+  <div class="card">
+    <h2>Day 2: Button Component System</h2>
+
+    <div class="row">
+      <span>Primary Buttons</span>
+      <div class="buttons">
+        <button class="btn primary">Default</button>
+        <button class="btn primary hover">Hover</button>
+        <button class="btn primary active">Active</button>
+        <button class="btn disabled" disabled>Disabled</button>
+      </div>
+    </div>
+
+    <div class="row">
+      <span>Secondary Buttons (Outline)</span>
+      <div class="buttons">
+        <button class="btn outline">Default</button>
+        <button class="btn outline hover">Hover</button>
+        <button class="btn outline active">Active</button>
+        <button class="btn outline disabled" disabled>Disabled</button>
+      </div>
+    </div>
+  </div>
+
 </main>
+
+<footer class="footer">
+  © 2024 Dhara Dasadiya
+</footer>
 
 <script src="script.js"></script>
 </body>
