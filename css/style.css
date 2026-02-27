@@ -1,4 +1,18 @@
-:root {
+.primary.disabled {
+  background: #bdbdbd;
+  color: #ffffff;
+  position: relative;
+  padding-right: 35px;
+}
+
+.primary.disabled::after {
+  content: "🚫";
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;
+}:root {
   --primary-color: #2f6ea5;
 }
 
