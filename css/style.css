@@ -1,4 +1,12 @@
-:root {
+/* Disabled button normal state */
+.btn.disabled::after {
+  content: "";
+}
+
+/* Hover (touch) par j symbol dikhse */
+.btn.disabled:hover::after {
+  content: " 🚫";
+}:root {
   --primary-color: #2f6ea5;
 }
 
