@@ -1,54 +1,61 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #f4f4f4;
+  background-color: #f4f6f8;
 }
 
-header {
+/* Top Header */
+.topbar {
   background: #ffffff;
-  padding: 15px 30px;
-  font-size: 20px;
+  padding: 18px 30px;
+  font-size: 22px;
   font-weight: bold;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
-.card {
-  background: white;
+/* Main Card */
+.container {
+  background: #ffffff;
+  width: 85%;
   margin: 40px auto;
-  width: 80%;
-  padding: 20px;
+  padding: 25px;
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
 .button-group {
   margin-top: 15px;
 }
 
+/* Base Button */
 .btn {
-  padding: 10px 20px;
+  padding: 10px 22px;
   margin-right: 10px;
   border: none;
   border-radius: 6px;
-  cursor: pointer;
-  background: #2f6fad;
+  background-color: #2f6fad;
   color: white;
+  cursor: pointer;
   transition: 0.3s;
 }
 
+/* Hover State */
 .btn:hover {
-  background: #1f4f80;
+  background-color: #1f4f80;
 }
 
+/* Active Style */
 .active-btn {
-  background: #163d63;
+  background-color: #163d63;
 }
 
+/* Disabled Style */
 .disabled {
-  background: #999;
+  background-color: #9e9e9e;
   cursor: not-allowed;
 }
 
-/* 🚫 symbol ONLY hover/touch par */
+/* 🚫 Symbol ONLY hover/touch par */
 .disabled::after {
   content: "";
 }
