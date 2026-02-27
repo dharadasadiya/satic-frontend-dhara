@@ -1,6 +1,12 @@
-// Hamburger only for assignment completeness
-const hamburger = document.querySelector(".hamburger");
+const form = document.getElementById("searchForm");
+const input = document.getElementById("searchInput");
 
-hamburger.addEventListener("click", () => {
-  alert("Mobile menu (Day 3 task)");
+form.addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  if (input.value.trim() === "") {
+    alert("Please enter a search term.");
+  } else {
+    console.log("Searching for:", input.value);
+  }
 });
