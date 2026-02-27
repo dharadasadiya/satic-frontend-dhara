@@ -1,38 +1,58 @@
 body {
+  margin: 0;
   font-family: Arial, sans-serif;
-  text-align: center;
-  margin-top: 50px;
+  background: #f4f4f4;
 }
 
-/* Common button style */
-.btn {
-  padding: 12px 25px;
-  font-size: 16px;
-  border: none;
+header {
+  background: #ffffff;
+  padding: 15px 30px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.card {
+  background: white;
+  margin: 40px auto;
+  width: 80%;
+  padding: 20px;
   border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.button-group {
+  margin-top: 15px;
+}
+
+.btn {
+  padding: 10px 20px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 6px;
   cursor: pointer;
-  margin: 10px;
-}
-
-/* Active button */
-.primary {
-  background-color: #007bff;
+  background: #2f6fad;
   color: white;
+  transition: 0.3s;
 }
 
-/* Disabled button */
+.btn:hover {
+  background: #1f4f80;
+}
+
+.active-btn {
+  background: #163d63;
+}
+
 .disabled {
-  background-color: #ccc;
-  color: #555;
+  background: #999;
   cursor: not-allowed;
 }
 
-/* Default state - no symbol */
-.btn.disabled::after {
+/* 🚫 symbol ONLY hover/touch par */
+.disabled::after {
   content: "";
 }
 
-/* Hover / touch par j symbol aavse */
-.btn.disabled:hover::after {
+.disabled:hover::after {
   content: " 🚫";
 }
