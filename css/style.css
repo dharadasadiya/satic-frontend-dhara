@@ -1,18 +1,4 @@
-.primary.disabled {
-  background: #bdbdbd;
-  color: #ffffff;
-  position: relative;
-  padding-right: 35px;
-}
-
-.primary.disabled::after {
-  content: "🚫";
-  position: absolute;
-  right: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 14px;
-}:root {
+:root {
   --primary-color: #2f6ea5;
 }
 
@@ -42,7 +28,7 @@ body {
   cursor: pointer;
 }
 
-/* Hero */
+/* Section */
 .hero {
   width: 80%;
   margin: 30px auto;
@@ -56,7 +42,7 @@ body {
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-/* Search Box */
+/* Search */
 .search-box {
   display: flex;
   margin-top: 10px;
@@ -82,10 +68,6 @@ body {
   color: white;
   cursor: pointer;
   border-radius: 0 5px 5px 0;
-}
-
-.search-box button:hover {
-  opacity: 0.9;
 }
 
 /* Buttons */
@@ -115,7 +97,19 @@ body {
   transform: scale(0.95);
 }
 
-.disabled {
-  background: #999;
+/* Disabled Button */
+.btn.primary.disabled {
+  background: #bdbdbd;
+  position: relative;
+  padding-right: 35px;
   cursor: not-allowed;
+}
+
+.btn.primary.disabled::after {
+  content: "🚫";
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;
 }
