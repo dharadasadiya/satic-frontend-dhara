@@ -2,55 +2,53 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dhara Dasadiya</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<header class="navbar">
-  <div class="nav-left">Dhara Dasadiya</div>
-  <button class="hamburger">☰</button>
-</header>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <h2 class="logo">Dhara Dasadiya</h2>
+    <div class="menu-icon">&#9776;</div>
+  </nav>
 
-<main class="container">
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="card">
+      <h2>H2 Find Your Tasks</h2>
 
-  <div class="card">
-    <h3>My Frontend Journey</h3>
-    <ul>
-      <li>Day 1: Setup & Deployment (Completed)</li>
-    </ul>
-  </div>
+      <form id="searchForm" class="search-box">
+        <input 
+          type="text" 
+          id="searchInput"
+          placeholder="Search content..."
+          aria-label="Search content"
+        />
+        <button type="submit">🔍</button>
+      </form>
+    </div>
 
-  <div class="card">
-    <h2>Day 2: Button Component System</h2>
+    <div class="card">
+      <h3>H3 My Frontend Journey</h3>
+      <ul>
+        <li>Day 1: Setup & Deployment (Completed)</li>
+      </ul>
+    </div>
 
-    <div class="row">
-      <span>Primary Buttons</span>
-      <div class="buttons">
+    <div class="card">
+      <h2>H2 Day 2: Button Component System</h2>
+      <p>Primary Buttons</p>
+
+      <div class="button-group">
         <button class="btn primary">Default</button>
         <button class="btn primary hover">Hover</button>
         <button class="btn primary active">Active</button>
-        <button class="btn disabled" disabled>Disabled</button>
+        <button class="btn primary disabled" disabled>Disabled</button>
       </div>
     </div>
-
-    <div class="row">
-      <span>Secondary Buttons (Outline)</span>
-      <div class="buttons">
-        <button class="btn outline">Default</button>
-        <button class="btn outline hover">Hover</button>
-        <button class="btn outline active">Active</button>
-        <button class="btn outline disabled" disabled>Disabled</button>
-      </div>
-    </div>
-  </div>
-
-</main>
-
-<footer class="footer">
-  © 2024 Dhara Dasadiya
-</footer>
+  </section>
 
 <script src="script.js"></script>
 </body>
