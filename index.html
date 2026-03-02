@@ -25,10 +25,6 @@
       margin: 10px 0;
     }
 
-    /* =========================
-       DAY 0 – PROJECTS SECTION
-    ========================== */
-
     .projects-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -41,8 +37,6 @@
       border: 1px solid #ddd;
       border-radius: 8px;
       padding: 16px;
-
-      /* Flex inside card (Required) */
       display: flex;
       flex-direction: column;
     }
@@ -50,10 +44,9 @@
     .card img {
       width: 100%;
       height: 140px;
-      object-fit: cover; /* Required */
+      object-fit: cover;
       border-radius: 6px;
       margin-bottom: 10px;
-      background: #e5e5e5;
     }
 
     .card p {
@@ -61,14 +54,9 @@
       color: #555;
     }
 
-    /* Push button to bottom */
     .card .btn {
       margin-top: auto;
     }
-
-    /* =========================
-       DAY 2 – BUTTON COMPONENT
-    ========================== */
 
     .btn {
       padding: 6px 14px;
@@ -85,10 +73,6 @@
       color: white;
     }
 
-    /* =========================
-       DAY 1 – JOURNEY SECTION
-    ========================== */
-
     .journey {
       background: white;
       border: 1px solid #ddd;
@@ -97,13 +81,11 @@
       margin-bottom: 50px;
     }
 
-    /* Responsive */
     @media (max-width: 768px) {
       .projects-grid {
         grid-template-columns: 1fr;
       }
     }
-
   </style>
 </head>
 
@@ -111,36 +93,37 @@
 
   <div class="wrapper">
 
-    <!-- ================= DAY 0 ================= -->
-    <h2>H2 My Projects</h2>
+    <h2>My Projects</h2>
 
     <div class="projects-grid">
 
+      <!-- Portfolio -->
       <div class="card">
-        <img src="https://via.placeholder.com/400x200">
-        <h3>H3 Portfolio Website</h3>
+        <img src="portfolio.png" alt="Portfolio Website">
+        <h3>Portfolio Website</h3>
         <p>A personal site built with HTML/CSS.</p>
         <button class="btn">View Project</button>
       </div>
 
+      <!-- Weather -->
       <div class="card">
-        <img src="https://via.placeholder.com/400x200">
-        <h3>H3 Weather App</h3>
-        <p>A React app that fetches live weather data from an API with dynamic updates and clean UI design.</p>
+        <img src="weather.png" alt="Weather App">
+        <h3>Weather App</h3>
+        <p>A React app that fetches live weather data from an API.</p>
         <button class="btn">View Project</button>
       </div>
 
+      <!-- Ecommerce -->
       <div class="card">
-        <img src="https://via.placeholder.com/400x200">
-        <h3>H3 E-commerce Platform</h3>
-        <p>A full-stack shop with cart, authentication, payment integration, and order management features.</p>
+        <img src="ecommerce.png" alt="Ecommerce Platform">
+        <h3>E-commerce Platform</h3>
+        <p>A full-stack shop with cart and payment integration.</p>
         <button class="btn">View Project</button>
       </div>
 
     </div>
 
-    <!-- ================= DAY 1 ================= -->
-    <h2>H3 My Frontend Journey</h2>
+    <h2>My Frontend Journey</h2>
 
     <div class="journey">
       <ul>
@@ -148,13 +131,10 @@
       </ul>
     </div>
 
-    <!-- ================= DAY 2 ================= -->
-    <h2>H2 Day 2: Button Component System</h2>
+    <h2>Day 2: Button Component System</h2>
 
     <div class="journey">
-      <p>
-        Reusable Secondary Outline Button built using component-based CSS.
-      </p>
+      <p>Reusable Secondary Outline Button built using component-based CSS.</p>
       <button class="btn">Secondary Button</button>
     </div>
 
