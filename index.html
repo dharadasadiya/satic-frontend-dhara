@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>My Portfolio</title>
+  <title>Projects Section</title>
 
   <style>
     body {
-      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-      background: #f3f4f6;
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
       margin: 0;
-      padding: 60px 20px;
+      padding: 50px 20px;
     }
 
     .container {
@@ -17,84 +17,78 @@
     }
 
     h2 {
-      font-size: 28px;
-      margin-bottom: 30px;
+      margin-bottom: 25px;
     }
 
-    /* Projects Layout */
-    .projects {
-      display: flex;
+    /* ===== GRID LAYOUT (Required) ===== */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
       gap: 25px;
-      margin-bottom: 60px;
-      flex-wrap: wrap;
     }
 
+    /* ===== CARD COMPONENT ===== */
     .card {
       background: white;
-      border: 1px solid #e5e7eb;
-      border-radius: 12px;
-      padding: 25px;
-      width: 320px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.03);
-      transition: 0.2s ease;
-    }
+      border: 1px solid #e0e0e0;
+      border-radius: 10px;
+      padding: 20px;
 
-    .card:hover {
-      transform: translateY(-5px);
+      /* Flexbox inside card (Required) */
+      display: flex;
+      flex-direction: column;
     }
 
     .card img {
       width: 100%;
-      height: 150px;
-      object-fit: cover;
+      height: 160px;
+      object-fit: cover; /* Required */
       border-radius: 8px;
-      margin-bottom: 18px;
+      margin-bottom: 15px;
     }
 
     .card h3 {
-      margin: 0 0 10px;
-      font-size: 20px;
+      margin: 10px 0;
     }
 
     .card p {
-      color: #6b7280;
       font-size: 14px;
-      margin-bottom: 18px;
+      color: #555;
     }
 
-    /* Button Component */
+    /* Push button to bottom */
+    .card .btn {
+      margin-top: auto;
+    }
+
+    /* ===== Button Component ===== */
     .btn {
-      padding: 9px 16px;
-      border-radius: 8px;
-      font-size: 14px;
-      cursor: pointer;
-      border: 1px solid #d1d5db;
+      padding: 8px 14px;
+      border: 1px solid #888;
       background: white;
+      border-radius: 6px;
+      cursor: pointer;
       transition: 0.2s;
     }
 
     .btn:hover {
-      background: #111827;
+      background: black;
       color: white;
-      border-color: #111827;
     }
 
-    /* Journey Section */
+    /* ===== Journey Section ===== */
     .journey {
+      margin-top: 50px;
       background: white;
-      border: 1px solid #e5e7eb;
-      padding: 30px;
-      border-radius: 12px;
+      padding: 25px;
+      border-radius: 10px;
+      border: 1px solid #e0e0e0;
     }
 
-    .journey p {
-      color: #374151;
-    }
-
-    /* Responsive */
+    /* ===== Responsive ===== */
     @media (max-width: 768px) {
-      .projects {
-        justify-content: center;
+      .projects-grid {
+        grid-template-columns: 1fr;
       }
     }
 
@@ -105,39 +99,41 @@
 
   <div class="container">
 
-    <h2>My Projects</h2>
+    <h2>H2 My Projects</h2>
 
-    <div class="projects">
+    <div class="projects-grid">
 
       <div class="card">
-        <img src="https://via.placeholder.com/320x150" alt="Portfolio">
-        <h3>Portfolio Website</h3>
+        <img src="https://via.placeholder.com/400x200">
+        <h3>H3 Portfolio Website</h3>
         <p>A personal site built with HTML/CSS.</p>
         <button class="btn">View Project</button>
       </div>
 
       <div class="card">
-        <img src="https://via.placeholder.com/320x150" alt="Weather App">
-        <h3>Weather App</h3>
-        <p>A React app that fetches live weather data from an API.</p>
+        <img src="https://via.placeholder.com/400x200">
+        <h3>H3 Weather App</h3>
+        <p>A React app that fetches live weather data from an API with dynamic updates and clean UI design.</p>
         <button class="btn">View Project</button>
       </div>
 
       <div class="card">
-        <img src="https://via.placeholder.com/320x150" alt="E-commerce">
-        <h3>E-commerce Platform</h3>
-        <p>A full-stack shop with cart, user auth, and payment integration.</p>
+        <img src="https://via.placeholder.com/400x200">
+        <h3>H3 E-commerce Platform</h3>
+        <p>A full-stack shop with cart, user authentication, payment integration, order history, and admin dashboard support.</p>
         <button class="btn">View Project</button>
       </div>
 
     </div>
 
     <div class="journey">
-      <h2>My Frontend Journey</h2>
-      <p>Day 1: Setup & Deployment (Completed)</p>
+      <h2>H3 My Frontend Journey</h2>
+      <ul>
+        <li>Day 1: Setup & Deployment (Completed)</li>
+      </ul>
     </div>
 
   </div>
 
 </body>
-</html>
+</
