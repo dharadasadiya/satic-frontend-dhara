@@ -1,12 +1,21 @@
-const form = document.getElementById("searchForm");
-const input = document.getElementById("searchInput");
+console.log("Day 1 Task Loaded");
 
-form.addEventListener("submit", function(e) {
-  e.preventDefault();
+//Hamburger 
+function toggleMenu(){
+    document.getElementById("navLinks").classList.toggle("active");
+}
 
-  if (input.value.trim() === "") {
-    alert("Please enter a search term.");
-  } else {
-    console.log("Searching for:", input.value);
-  }
-});
+//Searching Bar
+function openPopup(){
+    let value = document.getElementById("searchInput").value;
+    if(value.trim()===""){
+        document.getElementById("popupText").innerText="Please type my name";
+    } else {
+        document.getElementById("popupText").innerText="You searched for: " + value + "a";
+    }
+    document.getElementById("popup").style.display="flex";
+}
+
+function closePopup(){
+    document.getElementById("popup").style.display="none";
+}
