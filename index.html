@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="UTF-8">
   <title>Static Frontend Dhara</title>
 
   <style>
@@ -17,36 +18,30 @@
     }
 
     h2 {
-      font-size: 22px;
       margin-bottom: 20px;
     }
 
-    h3 {
-      margin: 10px 0;
-    }
-
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
+    .cards {
+      display: flex;
       gap: 20px;
-      margin-bottom: 50px;
+      flex-wrap: wrap;
     }
 
     .card {
       background: white;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      padding: 16px;
-      display: flex;
-      flex-direction: column;
+      width: 300px;
+      border-radius: 10px;
+      padding: 15px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
 
     .card img {
       width: 100%;
-      height: 140px;
-      object-fit: cover;
       border-radius: 6px;
-      margin-bottom: 10px;
+    }
+
+    .card h3 {
+      margin: 10px 0 5px;
     }
 
     .card p {
@@ -54,38 +49,70 @@
       color: #555;
     }
 
-    .card .btn {
-      margin-top: auto;
-    }
-
     .btn {
-      padding: 6px 14px;
+      display: block;
+      text-align: center;
+      padding: 8px;
+      margin-top: 10px;
+      border: 1px solid #333;
       border-radius: 6px;
-      border: 1px solid #888;
-      background: white;
-      cursor: pointer;
-      font-size: 14px;
-      transition: 0.2s;
+      text-decoration: none;
+      color: black;
+      font-weight: 500;
     }
 
     .btn:hover {
-      background: black;
+      background: #eee;
+    }
+
+    /* Notification section */
+
+    .notification-section {
+      margin-top: 50px;
+    }
+
+    .green-btn {
+      background: #28a745;
       color: white;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-right: 10px;
     }
 
-    .journey {
-      background: white;
-      border: 1px solid #ddd;
-      padding: 20px;
-      border-radius: 8px;
-      margin-bottom: 50px;
+    .red-btn {
+      background: #dc3545;
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 6px;
+      cursor: pointer;
     }
 
-    @media (max-width: 768px) {
-      .projects-grid {
-        grid-template-columns: 1fr;
-      }
+    /* Toast */
+
+    .toast {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      padding: 12px 18px;
+      border-radius: 6px;
+      color: white;
+      margin-top: 10px;
+      display: none;
+      min-width: 250px;
     }
+
+    .success {
+      background: #28a745;
+    }
+
+    .error {
+      background: #dc3545;
+      bottom: 70px;
+    }
+
   </style>
 </head>
 
@@ -93,52 +120,68 @@
 
   <div class="wrapper">
 
-    <h2>My Projects</h2>
+    <h2>H2 My Projects</h2>
 
-    <div class="projects-grid">
+    <div class="cards">
 
-      <!-- Portfolio -->
       <div class="card">
-        <img src="portfolio.png" alt="Portfolio Website">
-        <h3>Portfolio Website</h3>
+        <img src="https://via.placeholder.com/300x150" alt="">
+        <h3>H3 Portfolio Website</h3>
         <p>A personal site built with HTML/CSS.</p>
-        <button class="btn">View Project</button>
+        <a href="#" class="btn">View Project</a>
       </div>
 
-      <!-- Weather -->
       <div class="card">
-        <img src="weather.png" alt="Weather App">
-        <h3>Weather App</h3>
+        <img src="https://via.placeholder.com/300x150" alt="">
+        <h3>H3 Weather App</h3>
         <p>A React app that fetches live weather data from an API.</p>
-        <button class="btn">View Project</button>
+        <a href="#" class="btn">View Project</a>
       </div>
 
-      <!-- Ecommerce -->
       <div class="card">
-        <img src="ecommerce.png" alt="Ecommerce Platform">
-        <h3>E-commerce Platform</h3>
-        <p>A full-stack shop with cart and payment integration.</p>
-        <button class="btn">View Project</button>
+        <img src="https://via.placeholder.com/300x150" alt="">
+        <h3>H3 E-commerce Platform</h3>
+        <p>A full-stack shop with cart, user auth, and payment integration.</p>
+        <a href="#" class="btn">View Project</a>
       </div>
 
     </div>
 
-    <h2>My Frontend Journey</h2>
-
-    <div class="journey">
-      <ul>
-        <li>Day 1: Setup & Deployment (Completed)</li>
-      </ul>
-    </div>
-
-    <h2>Day 2: Button Component System</h2>
-
-    <div class="journey">
-      <p>Reusable Secondary Outline Button built using component-based CSS.</p>
-      <button class="btn">Secondary Button</button>
+    <div class="notification-section">
+      <h2>H2 Notification Playground</h2>
+      <button class="green-btn" onclick="showSuccess()">Trigger Success</button>
+      <button class="red-btn" onclick="showError()">Trigger Error</button>
     </div>
 
   </div>
+
+  <!-- Toast Messages -->
+
+  <div id="successToast" class="toast success">
+    ✔ Success: Project saved!
+  </div>
+
+  <div id="errorToast" class="toast error">
+    ⚠ Error: Failed to fetch data.
+  </div>
+
+  <script>
+    function showSuccess() {
+      var toast = document.getElementById("successToast");
+      toast.style.display = "block";
+      setTimeout(function() {
+        toast.style.display = "none";
+      }, 3000);
+    }
+
+    function showError() {
+      var toast = document.getElementById("errorToast");
+      toast.style.display = "block";
+      setTimeout(function() {
+        toast.style.display = "none";
+      }, 3000);
+    }
+  </script>
 
 </body>
 </html>
