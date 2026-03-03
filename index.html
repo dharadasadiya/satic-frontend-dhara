@@ -7,55 +7,51 @@
   <style>
     body {
       font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-      background-color: #f5f5f5;
+      background-color: #f6f7f9;
       margin: 0;
-      padding: 50px 20px;
+      padding: 60px 20px;
     }
 
     .wrapper {
-      max-width: 1000px;
+      max-width: 900px;
       margin: auto;
     }
 
     h2 {
-      margin-bottom: 20px;
+      margin-bottom: 30px;
     }
 
+    /* Cards Grid */
     .cards {
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
     }
 
     .card {
       background: white;
-      width: 300px;
-      border-radius: 10px;
-      padding: 15px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-
-    .card img {
-      width: 100%;
-      border-radius: 6px;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
     }
 
     .card h3 {
-      margin: 10px 0 5px;
+      margin-top: 0;
+      margin-bottom: 10px;
     }
 
     .card p {
-      font-size: 14px;
       color: #555;
+      font-size: 14px;
+      margin-bottom: 20px;
     }
 
     .btn {
       display: block;
       text-align: center;
-      padding: 8px;
-      margin-top: 10px;
+      padding: 10px;
       border: 1px solid #333;
-      border-radius: 6px;
+      border-radius: 8px;
       text-decoration: none;
       color: black;
       font-weight: 500;
@@ -65,18 +61,22 @@
       background: #eee;
     }
 
-    /* Notification section */
+    /* Make 3rd card full width */
+    .card.full {
+      grid-column: span 2;
+    }
 
+    /* Notification Section */
     .notification-section {
-      margin-top: 50px;
+      margin-top: 60px;
     }
 
     .green-btn {
       background: #28a745;
       color: white;
       border: none;
-      padding: 8px 12px;
-      border-radius: 6px;
+      padding: 10px 15px;
+      border-radius: 8px;
       cursor: pointer;
       margin-right: 10px;
     }
@@ -85,32 +85,30 @@
       background: #dc3545;
       color: white;
       border: none;
-      padding: 8px 12px;
-      border-radius: 6px;
+      padding: 10px 15px;
+      border-radius: 8px;
       cursor: pointer;
     }
 
     /* Toast */
-
     .toast {
       position: fixed;
       right: 20px;
-      bottom: 20px;
-      padding: 12px 18px;
-      border-radius: 6px;
+      padding: 14px 18px;
+      border-radius: 8px;
       color: white;
-      margin-top: 10px;
       display: none;
       min-width: 250px;
     }
 
     .success {
       background: #28a745;
+      bottom: 20px;
     }
 
     .error {
       background: #dc3545;
-      bottom: 70px;
+      bottom: 80px;
     }
 
   </style>
@@ -125,21 +123,18 @@
     <div class="cards">
 
       <div class="card">
-        <img src="https://via.placeholder.com/300x150" alt="">
         <h3>H3 Portfolio Website</h3>
         <p>A personal site built with HTML/CSS.</p>
         <a href="#" class="btn">View Project</a>
       </div>
 
       <div class="card">
-        <img src="https://via.placeholder.com/300x150" alt="">
         <h3>H3 Weather App</h3>
         <p>A React app that fetches live weather data from an API.</p>
         <a href="#" class="btn">View Project</a>
       </div>
 
-      <div class="card">
-        <img src="https://via.placeholder.com/300x150" alt="">
+      <div class="card full">
         <h3>H3 E-commerce Platform</h3>
         <p>A full-stack shop with cart, user auth, and payment integration.</p>
         <a href="#" class="btn">View Project</a>
@@ -151,37 +146,3 @@
       <h2>H2 Notification Playground</h2>
       <button class="green-btn" onclick="showSuccess()">Trigger Success</button>
       <button class="red-btn" onclick="showError()">Trigger Error</button>
-    </div>
-
-  </div>
-
-  <!-- Toast Messages -->
-
-  <div id="successToast" class="toast success">
-    ✔ Success: Project saved!
-  </div>
-
-  <div id="errorToast" class="toast error">
-    ⚠ Error: Failed to fetch data.
-  </div>
-
-  <script>
-    function showSuccess() {
-      var toast = document.getElementById("successToast");
-      toast.style.display = "block";
-      setTimeout(function() {
-        toast.style.display = "none";
-      }, 3000);
-    }
-
-    function showError() {
-      var toast = document.getElementById("errorToast");
-      toast.style.display = "block";
-      setTimeout(function() {
-        toast.style.display = "none";
-      }, 3000);
-    }
-  </script>
-
-</body>
-</html>
