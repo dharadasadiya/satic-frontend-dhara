@@ -7,108 +7,133 @@
   <style>
     body {
       font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-      background-color: #f6f7f9;
+      background: #f3f4f6;
       margin: 0;
       padding: 60px 20px;
     }
 
-    .wrapper {
-      max-width: 900px;
+    .container {
+      max-width: 1000px;
       margin: auto;
     }
 
     h2 {
-      margin-bottom: 30px;
+      margin-bottom: 25px;
     }
 
-    /* Cards Grid */
+    /* Cards */
     .cards {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 30px;
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
     }
 
     .card {
       background: white;
-      padding: 25px;
+      width: 300px;
       border-radius: 12px;
+      padding: 20px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.05);
     }
 
-    .card h3 {
-      margin-top: 0;
+    .card img {
+      width: 100%;
+      border-radius: 8px;
       margin-bottom: 10px;
     }
 
+    .card h3 {
+      margin: 10px 0 5px;
+    }
+
     .card p {
-      color: #555;
       font-size: 14px;
-      margin-bottom: 20px;
+      color: #555;
     }
 
     .btn {
-      display: block;
-      text-align: center;
-      padding: 10px;
-      border: 1px solid #333;
-      border-radius: 8px;
-      text-decoration: none;
-      color: black;
-      font-weight: 500;
+      width: 100%;
+      padding: 8px;
+      border-radius: 6px;
+      border: 1px solid #aaa;
+      background: white;
+      cursor: pointer;
+      margin-top: 10px;
     }
 
     .btn:hover {
       background: #eee;
     }
 
-    /* Make 3rd card full width */
-    .card.full {
-      grid-column: span 2;
-    }
-
     /* Notification Section */
     .notification-section {
-      margin-top: 60px;
+      margin-top: 50px;
     }
 
     .green-btn {
-      background: #28a745;
+      background: #16a34a;
       color: white;
       border: none;
-      padding: 10px 15px;
-      border-radius: 8px;
+      padding: 8px 14px;
+      border-radius: 6px;
       cursor: pointer;
       margin-right: 10px;
     }
 
     .red-btn {
-      background: #dc3545;
+      background: #dc2626;
       color: white;
       border: none;
-      padding: 10px 15px;
-      border-radius: 8px;
+      padding: 8px 14px;
+      border-radius: 6px;
       cursor: pointer;
+    }
+
+    /* Toast Container */
+    #toast-container {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      z-index: 9999;
     }
 
     /* Toast */
     .toast {
-      position: fixed;
-      right: 20px;
-      padding: 14px 18px;
+      min-width: 260px;
+      padding: 12px 16px;
       border-radius: 8px;
       color: white;
-      display: none;
-      min-width: 250px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.3s ease;
+    }
+
+    .toast.show {
+      opacity: 1;
+      transform: translateY(0);
     }
 
     .success {
-      background: #28a745;
-      bottom: 20px;
+      background: #16a34a;
     }
 
     .error {
-      background: #dc3545;
-      bottom: 80px;
+      background: #dc2626;
+    }
+
+    .close-btn {
+      background: transparent;
+      border: none;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      margin-left: 10px;
     }
 
   </style>
@@ -116,33 +141,86 @@
 
 <body>
 
-  <div class="wrapper">
+  <div class="container">
 
     <h2>H2 My Projects</h2>
 
     <div class="cards">
 
       <div class="card">
+        <img src="https://via.placeholder.com/300x120">
         <h3>H3 Portfolio Website</h3>
         <p>A personal site built with HTML/CSS.</p>
-        <a href="#" class="btn">View Project</a>
+        <button class="btn">View Project</button>
       </div>
 
       <div class="card">
+        <img src="https://via.placeholder.com/300x120">
         <h3>H3 Weather App</h3>
         <p>A React app that fetches live weather data from an API.</p>
-        <a href="#" class="btn">View Project</a>
+        <button class="btn">View Project</button>
       </div>
 
-      <div class="card full">
+      <div class="card">
+        <img src="https://via.placeholder.com/300x120">
         <h3>H3 E-commerce Platform</h3>
         <p>A full-stack shop with cart, user auth, and payment integration.</p>
-        <a href="#" class="btn">View Project</a>
+        <button class="btn">View Project</button>
       </div>
 
     </div>
 
     <div class="notification-section">
       <h2>H2 Notification Playground</h2>
-      <button class="green-btn" onclick="showSuccess()">Trigger Success</button>
-      <button class="red-btn" onclick="showError()">Trigger Error</button>
+      <button class="green-btn" onclick="createToast('success')">Trigger Success</button>
+      <button class="red-btn" onclick="createToast('error')">Trigger Error</button>
+    </div>
+
+  </div>
+
+  <!-- Toast Container -->
+  <div id="toast-container"></div>
+
+  <script>
+    function createToast(type) {
+      const container = document.getElementById("toast-container");
+
+      const toast = document.createElement("div");
+      toast.classList.add("toast", type);
+
+      const message = document.createElement("span");
+      message.innerText =
+        type === "success"
+          ? "✔ Success: Project saved!"
+          : "⚠ Error: Failed to fetch data.";
+
+      const closeBtn = document.createElement("button");
+      closeBtn.innerHTML = "×";
+      closeBtn.classList.add("close-btn");
+
+      closeBtn.onclick = () => removeToast(toast);
+
+      toast.appendChild(message);
+      toast.appendChild(closeBtn);
+
+      container.appendChild(toast);
+
+      setTimeout(() => {
+        toast.classList.add("show");
+      }, 10);
+
+      setTimeout(() => {
+        removeToast(toast);
+      }, 3000);
+    }
+
+    function removeToast(toast) {
+      toast.classList.remove("show");
+      setTimeout(() => {
+        toast.remove();
+      }, 300);
+    }
+  </script>
+
+</body>
+</html>
