@@ -22,11 +22,11 @@ function validateName() {
 }
 
 function validateEmail() {
-  const emailValue = emailInput.value.trim();
-  if (!emailValue.includes("@") || !emailValue.includes(".")) {
+  const email = emailInput.value.trim();
+  if (!email.includes("@") || !email.includes(".")) {
     emailInput.classList.add("invalid");
     emailInput.classList.remove("valid");
-    emailError.textContent = "Enter a valid email address.";
+    emailError.textContent = "Enter a valid email.";
     return false;
   } else {
     emailInput.classList.add("valid");
@@ -50,17 +50,17 @@ function validateMessage() {
   }
 }
 
-function checkFormValidity() {
-  const isNameValid = validateName();
-  const isEmailValid = validateEmail();
-  const isMessageValid = validateMessage();
+function checkForm() {
+  const nameValid = validateName();
+  const emailValid = validateEmail();
+  const messageValid = validateMessage();
 
-  submitBtn.disabled = !(isNameValid && isEmailValid && isMessageValid);
+  submitBtn.disabled = !(nameValid && emailValid && messageValid);
 }
 
-nameInput.addEventListener("input", checkFormValidity);
-emailInput.addEventListener("input", checkFormValidity);
-messageInput.addEventListener("input", checkFormValidity);
+nameInput.addEventListener("input", checkForm);
+emailInput.addEventListener("input", checkForm);
+messageInput.addEventListener("input", checkForm);
 
 document.getElementById("contactForm").addEventListener("submit", function(e) {
   e.preventDefault();
