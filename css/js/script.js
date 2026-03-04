@@ -11,7 +11,7 @@ function validateName() {
   if (nameInput.value.trim().length < 3) {
     nameInput.classList.add("invalid");
     nameInput.classList.remove("valid");
-    nameError.textContent = "Name must be at least 3 characters.";
+    nameError.textContent = "Name must be at least 3 characters long.";
     return false;
   } else {
     nameInput.classList.add("valid");
@@ -26,7 +26,7 @@ function validateEmail() {
   if (!email.includes("@") || !email.includes(".")) {
     emailInput.classList.add("invalid");
     emailInput.classList.remove("valid");
-    emailError.textContent = "Enter a valid email.";
+    emailError.textContent = "Enter a valid email address.";
     return false;
   } else {
     emailInput.classList.add("valid");
