@@ -11,7 +11,7 @@ function validateName() {
   if (nameInput.value.trim().length < 3) {
     nameInput.classList.add("invalid");
     nameInput.classList.remove("valid");
-    nameError.textContent = "Name must be at least 3 characters long.";
+    nameError.textContent = "Name must be at least 3 characters.";
     return false;
   } else {
     nameInput.classList.add("valid");
