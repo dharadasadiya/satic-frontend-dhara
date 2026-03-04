@@ -1,13 +1,13 @@
 body {
-  font-family: Arial, sans-serif;
-  background: #f5f5f5;
   margin: 0;
-  padding: 40px;
+  font-family: Arial, sans-serif;
+  background-color: #f4f6f9;
 }
 
-.page {
+.container {
   display: flex;
-  gap: 50px;
+  gap: 60px;
+  padding: 50px;
 }
 
 /* LEFT SIDE */
@@ -15,30 +15,31 @@ body {
   flex: 2;
 }
 
-.cards {
+.project-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 15px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
 }
 
 .card {
   background: #2c3e50;
   color: white;
-  padding: 30px;
+  padding: 40px 20px;
+  border-radius: 10px;
   text-align: center;
-  border-radius: 8px;
+  font-weight: bold;
 }
 
 /* RIGHT SIDE */
-.contact {
+.contact-box {
   flex: 1;
   background: white;
-  padding: 25px;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
 }
 
-.contact h2 {
+.contact-box h2 {
   margin-top: 0;
 }
 
@@ -50,18 +51,17 @@ label {
 
 input, textarea {
   width: 100%;
-  padding: 8px;
+  padding: 10px;
+  border-radius: 6px;
   border: 2px solid #ccc;
-  border-radius: 5px;
   outline: none;
 }
 
 textarea {
-  height: 80px;
+  height: 90px;
   resize: none;
 }
 
-/* Validation Colors */
 .valid {
   border-color: green;
 }
@@ -70,19 +70,19 @@ textarea {
   border-color: red;
 }
 
-.error-msg {
+.error {
   font-size: 12px;
   color: red;
+  height: 15px;
   display: block;
-  height: 14px;
 }
 
 button {
   width: 100%;
+  padding: 12px;
   margin-top: 20px;
-  padding: 10px;
+  border-radius: 6px;
   border: none;
-  border-radius: 5px;
   background-color: #4a90e2;
   color: white;
   font-weight: bold;
@@ -90,7 +90,6 @@ button {
 }
 
 button:disabled {
-  background-color: gray;
-  opacity: 0.5;
+  background-color: #b0b0b0;
   cursor: not-allowed;
 }
