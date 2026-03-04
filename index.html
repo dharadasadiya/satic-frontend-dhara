@@ -7,38 +7,41 @@
 </head>
 <body>
 
-  <div class="page">
+  <div class="container">
 
+    <!-- LEFT SIDE -->
     <div class="projects">
       <h2>My Projects</h2>
-      <div class="cards">
+
+      <div class="project-grid">
         <div class="card">Project 1</div>
         <div class="card">Project 2</div>
         <div class="card">Project 3</div>
         <div class="card">Project 4</div>
+        <div class="card">Project 5</div>
+        <div class="card">Project 6</div>
       </div>
     </div>
 
-    <div class="contact">
+    <!-- RIGHT SIDE -->
+    <div class="contact-box">
       <h2>Contact Me</h2>
 
       <form id="contactForm" novalidate>
 
         <label for="name">Name:</label>
         <input type="text" id="name">
-        <span class="error-msg" id="nameError"></span>
+        <span class="error" id="nameError"></span>
 
         <label for="email">Email:</label>
         <input type="email" id="email">
-        <span class="error-msg" id="emailError"></span>
+        <span class="error" id="emailError"></span>
 
         <label for="message">Message:</label>
         <textarea id="message"></textarea>
-        <span class="error-msg" id="messageError"></span>
+        <span class="error" id="messageError"></span>
 
-        <button type="submit" id="submitBtn" disabled>
-          Send Message
-        </button>
+        <button id="submitBtn" disabled>Send Message</button>
 
       </form>
     </div>
