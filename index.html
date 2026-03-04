@@ -7,32 +7,43 @@
 </head>
 <body>
 
-  <section class="contact-section">
-    <h2>Contact Me</h2>
+  <div class="page">
 
-    <form id="contactForm" novalidate>
+    <div class="projects">
+      <h2>My Projects</h2>
+      <div class="cards">
+        <div class="card">Project 1</div>
+        <div class="card">Project 2</div>
+        <div class="card">Project 3</div>
+        <div class="card">Project 4</div>
+      </div>
+    </div>
 
-      <!-- Name -->
-      <label for="name">Name:</label>
-      <input type="text" id="name">
-      <span class="error-msg" id="nameError"></span>
+    <div class="contact">
+      <h2>Contact Me</h2>
 
-      <!-- Email -->
-      <label for="email">Email:</label>
-      <input type="email" id="email">
-      <span class="error-msg" id="emailError"></span>
+      <form id="contactForm" novalidate>
 
-      <!-- Message -->
-      <label for="message">Message:</label>
-      <textarea id="message"></textarea>
-      <span class="error-msg" id="messageError"></span>
+        <label for="name">Name:</label>
+        <input type="text" id="name">
+        <span class="error-msg" id="nameError"></span>
 
-      <button type="submit" id="submitBtn" disabled>
-        Send Message
-      </button>
+        <label for="email">Email:</label>
+        <input type="email" id="email">
+        <span class="error-msg" id="emailError"></span>
 
-    </form>
-  </section>
+        <label for="message">Message:</label>
+        <textarea id="message"></textarea>
+        <span class="error-msg" id="messageError"></span>
+
+        <button type="submit" id="submitBtn" disabled>
+          Send Message
+        </button>
+
+      </form>
+    </div>
+
+  </div>
 
   <script src="script.js"></script>
 </body>
