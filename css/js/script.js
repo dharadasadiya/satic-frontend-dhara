@@ -9,9 +9,9 @@ function toggleMenu(){
 function openPopup(){
     let value = document.getElementById("searchInput").value;
     if(value.trim()===""){
-        document.getElementById("popupText").innerText="Please type something cutie 😊";
+        document.getElementById("popupText").innerText="Please type Dhara Dasadiya";
     } else {
-        document.getElementById("popupText").innerText="You searched for: " + value + "❤️";
+        document.getElementById("popupText").innerText="You searched for: " + value + "A";
     }
     document.getElementById("popup").style.display="flex";
 }
