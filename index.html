@@ -1,70 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Internship Hub - Dhara Dasadiya</title>
-  <link rel="stylesheet" href="style.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Frontend Development - Dhara Dasadiya</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Page Wrapper for Sticky Footer -->
-  <div class="page-wrapper">
+<!-- Header -->
+<header>
+    <h2>Dhara Dasadiya</h2>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Projects</a>
+        <a href="#">Internship</a>
+        <a href="#">Contact</a>
+    </nav>
+</header>
 
-    <!-- Navbar -->
-    <header class="navbar">
-      <h3>Navbar (short from Day 3)</h3>
-    </header>
+<!-- Hero Section -->
+<section class="hero">
 
-    <!-- Main Content -->
-    <main class="content">
-      <h1>About Me</h1>
-      <p>
-        My name is dhara dasadiya to work an environment which encourages me to succeed and grow professionally where i can utilze my skills and knowledge appropritely.
-      </p>
-    </main>
+    <img src="dhara.jpg" alt="Dhara Dasadiya" class="profile-img">
 
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="footer-container">
+    <h1>Front-End Developer Internship</h1>
+    <p>Learning, building and improving frontend skills every day.</p>
 
-        <!-- Column 1 -->
-        <div class="footer-column">
-          <h2>Dhara Dasadiya</h2>
-          <p>Frontend Developer. Building cool things.</p>
-        </div>
+    <div class="buttons">
+        <button class="primary">Primary Button</button>
+        <button class="secondary">Secondary Button</button>
+        <button class="disabled" disabled>Disabled</button>
+    </div>
 
-        <!-- Column 2 -->
-        <div class="footer-column">
-          <h3>Quick Links</h3>
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Projects</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
-        </div>
+</section>
 
-        <!-- Column 3 -->
-        <div class="footer-column">
-          <h3>Socials</h3>
-          <ul>
-            <li>
-              <a href="https://github.com/yourusername" target="_blank">
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://www.linkedin.com/in/your-linkedin-id/" target="_blank">
-                LinkedIn
-              </a>
-            </li>
-          </ul>
-        </div>
+<!-- Cards Section -->
+<section class="cards">
 
-      </div>
-    </footer>
+    <div class="card">
+        <h3>HTML Basics</h3>
+        <p>Understanding webpage structure using semantic elements.</p>
+    </div>
 
-  </div>
+    <div class="card">
+        <h3>CSS Styling</h3>
+        <p>Designing responsive and beautiful user interfaces.</p>
+    </div>
 
+    <div class="card">
+        <h3>JavaScript</h3>
+        <p>Adding interactivity and dynamic behaviour to websites.</p>
+    </div>
+
+</section>
+
+<!-- Contact Section -->
+<section class="contact">
+    <h2>Contact Me</h2>
+
+    <form>
+        <input type="text" placeholder="Enter your name" required>
+        <input type="email" placeholder="Enter your email" required>
+        <textarea placeholder="Enter your message" required></textarea>
+        <button class="primary">Submit</button>
+    </form>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>© 2026 Dhara Dasadiya | Front-End Developer</p>
+    <p>
+        <a href="#">GitHub</a> |
+        <a href="#">LinkedIn</a>
+    </p>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
