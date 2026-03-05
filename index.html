@@ -1,140 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Dhara Dasadiya | Frontend Developer</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-        }
-
-        header {
-            background: #4CAF50;
-            color: white;
-            text-align: center;
-            padding: 40px 20px;
-        }
-
-        nav {
-            background: #333;
-            padding: 10px;
-            text-align: center;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
-        }
-
-        nav a:hover {
-            color: #4CAF50;
-        }
-
-        section {
-            padding: 40px 20px;
-            text-align: center;
-        }
-
-        .project-card {
-            background: white;
-            padding: 20px;
-            margin: 15px auto;
-            width: 80%;
-            max-width: 400px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            border-radius: 8px;
-        }
-
-        footer {
-            background: #333;
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
-
-        button {
-            padding: 10px 20px;
-            border: none;
-            background: #4CAF50;
-            color: white;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-
-        button:hover {
-            background: #45a049;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>Dhara Dasadiya | Frontend Developer</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-    <header>
-        <h1>Dhara Dasadiya</h1>
-        <p>Front-End Developer</p>
-        <p>Email: 
-            <a href="mailto:dharadasadiya64@gmail.com" style="color:white;">
-                dharadasadiya64@gmail.com
-            </a>
-        </p>
-    </header>
+  <header>
+    <h1>Dhara Dasadiya</h1>
+    <p>Frontend Developer</p>
+  </header>
 
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-    </nav>
+  <section class="about">
+    <h2>About Me</h2>
+    <p>
+      Hello! I'm Dhara Dasadiya, a passionate Frontend Developer.
+      I love creating beautiful and responsive websites using HTML, CSS, and JavaScript.
+    </p>
+  </section>
 
-    <section id="home">
-        <h2>Welcome</h2>
-        <p>I am learning HTML, CSS, and JavaScript to become a professional Frontend Developer.</p>
-        <button onclick="showMessage()">Click Me</button>
-    </section>
+  <section class="skills">
+    <h2>My Skills</h2>
+    <ul>
+      <li>HTML5</li>
+      <li>CSS3</li>
+      <li>JavaScript</li>
+      <li>Responsive Design</li>
+    </ul>
+  </section>
 
-    <section id="projects">
-        <h2>My Projects</h2>
+  <section class="projects">
+    <h2>Projects</h2>
 
-        <div class="project-card">
-            <h3>HTML Project</h3>
-            <p>Basic website using HTML structure.</p>
-        </div>
+    <div class="project-card">
+      <h3>Portfolio Website</h3>
+      <p>Personal portfolio website using HTML & CSS.</p>
+    </div>
 
-        <div class="project-card">
-            <h3>CSS Styling Project</h3>
-            <p>Styled webpage using CSS design and layout.</p>
-        </div>
+    <div class="project-card">
+      <h3>Landing Page</h3>
+      <p>Responsive landing page design project.</p>
+    </div>
 
-        <div class="project-card">
-            <h3>JavaScript Project</h3>
-            <p>Interactive webpage with JavaScript functionality.</p>
-        </div>
-    </section>
+  </section>
 
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <p>Name: Dhara Dasadiya</p>
-        <p>Email: 
-            <a href="mailto:dharadasadiya64@gmail.com">
-                dharadasadiya64@gmail.com
-            </a>
-        </p>
-    </section>
+  <section class="contact">
+    <h2>Contact Me</h2>
+    <p>Email: 
+      <a href="mailto:dharadasadiya64@gmail.com">
+        dharadasadiya64@gmail.com
+      </a>
+    </p>
+  </section>
 
-    <footer>
-        <p>© 2026 Dhara Dasadiya | All Rights Reserved</p>
-    </footer>
-
-    <script>
-        function showMessage() {
-            alert("Thank you for visiting my portfolio!");
-        }
-    </script>
+  <footer>
+    <p>© 2026 Dhara Dasadiya. All Rights Reserved.</p>
+  </footer>
 
 </body>
 </html>
