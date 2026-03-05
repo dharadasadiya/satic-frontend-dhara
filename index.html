@@ -1,40 +1,70 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Internship Hub</title>
-  <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <title>Internship Hub - Dhara Dasadiya</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 
-<div class="container">
+  <!-- Page Wrapper for Sticky Footer -->
+  <div class="page-wrapper">
 
-  <div class="contact-box">
-    <h2>Contact Me</h2>
+    <!-- Navbar -->
+    <header class="navbar">
+      <h3>Navbar (short from Day 3)</h3>
+    </header>
 
-    <form id="contactForm" novalidate>
+    <!-- Main Content -->
+    <main class="content">
+      <h1>About Me</h1>
+      <p>
+        I am Dhara Dasadiya. Frontend Developer. Building cool things.
+      </p>
+    </main>
 
-      <!-- NAME -->
-      <label for="name">Name:</label>
-      <input type="text" id="name">
-      <span class="error-msg" id="nameError"></span>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-container">
 
-      <!-- EMAIL -->
-      <label for="email">Email:</label>
-      <input type="email" id="email">
-      <span class="error-msg" id="emailError"></span>
+        <!-- Column 1 -->
+        <div class="footer-column">
+          <h2>Dhara Dasadiya</h2>
+          <p>Frontend Developer. Building cool things.</p>
+        </div>
 
-      <!-- MESSAGE -->
-      <label for="message">Message:</label>
-      <textarea id="message"></textarea>
-      <span class="error-msg" id="messageError"></span>
+        <!-- Column 2 -->
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
 
-      <button id="submitBtn" disabled>Send Message</button>
+        <!-- Column 3 -->
+        <div class="footer-column">
+          <h3>Socials</h3>
+          <ul>
+            <li>
+              <a href="https://github.com/yourusername" target="_blank">
+                GitHub
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/your-linkedin-id/" target="_blank">
+                LinkedIn
+              </a>
+            </li>
+          </ul>
+        </div>
 
-    </form>
+      </div>
+    </footer>
+
   </div>
 
-</div>
-
-<script src="script.js"></script>
 </body>
 </html>
