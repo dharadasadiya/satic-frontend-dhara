@@ -1,17 +1,17 @@
 console.log("Day 1 Task Loaded");
 
-// Hamburger 
+//Hamburger 
 function toggleMenu(){
     document.getElementById("navLinks").classList.toggle("active");
 }
 
-// Searching Bar
+//Searching Bar
 function openPopup(){
     let value = document.getElementById("searchInput").value;
     if(value.trim()===""){
-        document.getElementById("popupText").innerText="Please type something.";
+        document.getElementById("popupText").innerText="Please type something different";
     } else {
-        document.getElementById("popupText").innerText="You searched for: " + value;
+        document.getElementById("popupText").innerText="You searched for: " + value + "A";
     }
     document.getElementById("popup").style.display="flex";
 }
@@ -20,7 +20,7 @@ function closePopup(){
     document.getElementById("popup").style.display="none";
 }
 
-// Notification Banner 
+//Notification Banner 
 const successBtn = document.getElementById("successBtn");
 const errorBtn = document.getElementById("errorBtn");
 const container = document.getElementById("notificationContainer");
@@ -57,7 +57,7 @@ function showNotification(type, message){
         });
 }
 
-// Contact Me Form
+//Contact Me Form
 const form = document.getElementById("contactForm");
 const nameInput = document.getElementById("name");
 const emailInput = document.getElementById("email");
@@ -125,7 +125,7 @@ messageInput.addEventListener("input", checkFormValidity);
 
 form.addEventListener("submit", function(e) {
   e.preventDefault();
-  alert("Message Sent Successfully");
+  alert("Message Sent Successfully ✅");
   form.reset();
   submitBtn.disabled = true;
 });
