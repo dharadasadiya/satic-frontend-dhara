@@ -9,7 +9,7 @@ function toggleMenu(){
 function openPopup(){
     let value = document.getElementById("searchInput").value;
     if(value.trim()===""){
-        document.getElementById("popupText").innerText="Please type something different";
+        document.getElementById("popupText").innerText="Please type something Different ";
     } else {
         document.getElementById("popupText").innerText="You searched for: " + value + "A";
     }
