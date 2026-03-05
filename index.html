@@ -1,62 +1,131 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Dhara Dasadiya | Frontend Developer</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+console.log("Day 1 Task Loaded");
 
-  <header>
-    <h1>Dhara Dasadiya</h1>
-    <p>Frontend Developer</p>
-  </header>
+// Hamburger 
+function toggleMenu(){
+    document.getElementById("navLinks").classList.toggle("active");
+}
 
-  <section class="about">
-    <h2>About Me</h2>
-    <p>
-      Hello! I'm Dhara Dasadiya, a passionate Frontend Developer.
-      I love creating beautiful and responsive websites using HTML, CSS, and JavaScript.
-    </p>
-  </section>
+// Searching Bar
+function openPopup(){
+    let value = document.getElementById("searchInput").value;
+    if(value.trim()===""){
+        document.getElementById("popupText").innerText="Please type something.";
+    } else {
+        document.getElementById("popupText").innerText="You searched for: " + value;
+    }
+    document.getElementById("popup").style.display="flex";
+}
 
-  <section class="skills">
-    <h2>My Skills</h2>
-    <ul>
-      <li>HTML5</li>
-      <li>CSS3</li>
-      <li>JavaScript</li>
-      <li>Responsive Design</li>
-    </ul>
-  </section>
+function closePopup(){
+    document.getElementById("popup").style.display="none";
+}
 
-  <section class="projects">
-    <h2>Projects</h2>
+// Notification Banner 
+const successBtn = document.getElementById("successBtn");
+const errorBtn = document.getElementById("errorBtn");
+const container = document.getElementById("notificationContainer");
 
-    <div class="project-card">
-      <h3>Portfolio Website</h3>
-      <p>Personal portfolio website using HTML & CSS.</p>
-    </div>
+successBtn.addEventListener("click", () => {
+    showNotification("success", "Success: Project saved!");
+});
 
-    <div class="project-card">
-      <h3>Landing Page</h3>
-      <p>Responsive landing page design project.</p>
-    </div>
+errorBtn.addEventListener("click", () => {
+    showNotification("error", "Error: Failed to fetch data.");
+});
 
-  </section>
+function showNotification(type, message){
 
-  <section class="contact">
-    <h2>Contact Me</h2>
-    <p>Email: 
-      <a href="mailto:dharadasadiya64@gmail.com">
-        dharadasadiya64@gmail.com
-      </a>
-    </p>
-  </section>
+    const notification = document.createElement("div");
+    notification.classList.add("notification", type);
 
-  <footer>
-    <p>© 2026 Dhara Dasadiya. All Rights Reserved.</p>
-  </footer>
+    notification.innerHTML = `
+        <span>${message}</span>
+        <button class="close-btn">&times;</button>
+    `;
 
-</body>
-</html>
+    container.appendChild(notification);
+
+    // Auto remove after 5 sec
+    setTimeout(() => {
+        notification.remove();
+    }, 5000);
+
+    // Manual close
+    notification.querySelector(".close-btn")
+        .addEventListener("click", () => {
+            notification.remove();
+        });
+}
+
+// Contact Me Form
+const form = document.getElementById("contactForm");
+const nameInput = document.getElementById("name");
+const emailInput = document.getElementById("email");
+const messageInput = document.getElementById("message");
+const submitBtn = document.getElementById("submitBtn");
+
+const nameError = document.getElementById("nameError");
+const emailError = document.getElementById("emailError");
+const messageError = document.getElementById("messageError");
+
+function validateName() {
+  if (nameInput.value.trim().length < 3) {
+    nameError.textContent = "Name must be at least 3 characters long.";
+    nameInput.classList.add("error-border");
+    nameInput.classList.remove("success");
+    return false;
+  } else {
+    nameError.textContent = "";
+    nameInput.classList.remove("error-border");
+    nameInput.classList.add("success");
+    return true;
+  }
+}
+
+function validateEmail() {
+  const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+  if (!emailPattern.test(emailInput.value.trim())) {
+    emailError.textContent = "Enter a valid email address.";
+    emailInput.classList.add("error-border");
+    emailInput.classList.remove("success");
+    return false;
+  } else {
+    emailError.textContent = "";
+    emailInput.classList.remove("error-border");
+    emailInput.classList.add("success");
+    return true;
+  }
+}
+
+function validateMessage() {
+  if (messageInput.value.trim().length < 10) {
+    messageError.textContent = "Message must be at least 10 characters.";
+    messageInput.classList.add("error-border");
+    messageInput.classList.remove("success");
+    return false;
+  } else {
+    messageError.textContent = "";
+    messageInput.classList.remove("error-border");
+    messageInput.classList.add("success");
+    return true;
+  }
+}
+
+function checkFormValidity() {
+  if (validateName() && validateEmail() && validateMessage()) {
+    submitBtn.disabled = false;
+  } else {
+    submitBtn.disabled = true;
+  }
+}
+
+nameInput.addEventListener("input", checkFormValidity);
+emailInput.addEventListener("input", checkFormValidity);
+messageInput.addEventListener("input", checkFormValidity);
+
+form.addEventListener("submit", function(e) {
+  e.preventDefault();
+  alert("Message Sent Successfully");
+  form.reset();
+  submitBtn.disabled = true;
+});
