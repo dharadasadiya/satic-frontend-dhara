@@ -1,84 +1,76 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Dhara Dasadiya | Frontend Developer</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  text-align: center;
+}
 
-    <!-- Navbar -->
-    <header>
-        <nav>
-            <h2 class="logo">Dhara.</h2>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+header {
+  background: #111;
+  color: white;
+  padding: 50px 0;
+}
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Hi, I'm <span>Dhara Dasadiya</span></h1>
-            <p>Frontend Developer | Creative Designer</p>
-            <button onclick="scrollToSection('contact')">Hire Me</button>
-        </div>
-    </section>
+header h1 {
+  margin: 0;
+  font-size: 40px;
+}
 
-    <!-- About Section -->
-    <section id="about" class="section">
-        <h2>About Me</h2>
-        <p>
-            I am a passionate Frontend Developer who loves building clean,
-            responsive and user-friendly websites using HTML, CSS and JavaScript.
-        </p>
-    </section>
+section {
+  padding: 50px 20px;
+}
 
-    <!-- Skills -->
-    <section id="skills" class="section dark">
-        <h2>My Skills</h2>
-        <div class="skills-container">
-            <div class="skill">HTML</div>
-            <div class="skill">CSS</div>
-            <div class="skill">JavaScript</div>
-            <div class="skill">Responsive Design</div>
-        </div>
-    </section>
+h2 {
+  margin-bottom: 20px;
+  font-size: 28px;
+}
 
-    <!-- Projects -->
-    <section id="projects" class="section">
-        <h2>Projects</h2>
-        <div class="project-card">
-            <h3>Portfolio Website</h3>
-            <p>Modern personal portfolio website using HTML, CSS and JS.</p>
-        </div>
-        <div class="project-card">
-            <h3>Landing Page</h3>
-            <p>Responsive business landing page design.</p>
-        </div>
-    </section>
+.about p {
+  max-width: 600px;
+  margin: auto;
+}
 
-    <!-- Contact -->
-    <section id="contact" class="section dark">
-        <h2>Contact Me</h2>
-        <form>
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
-    </section>
+.skills ul {
+  list-style: none;
+  padding: 0;
+}
 
-    <footer>
-        <p>© 2026 Dhara Dasadiya | All Rights Reserved</p>
-    </footer>
+.skills li {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px 20px;
+  background: #111;
+  color: white;
+  border-radius: 25px;
+}
 
-    <script src="script.js"></script>
-</body>
-</html>
+.project-card {
+  background: white;
+  margin: 20px auto;
+  padding: 20px;
+  width: 80%;
+  max-width: 500px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  border-radius: 15px;
+  transition: 0.3s;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+}
+
+.contact a {
+  color: #111;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.contact a:hover {
+  color: #ff4d4d;
+}
+
+footer {
+  background: #111;
+  color: white;
+  padding: 20px 0;
+}
