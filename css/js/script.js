@@ -1,3 +1,4 @@
+
 console.log("Day 1 Task Loaded");
 
 //Hamburger 
@@ -6,18 +7,18 @@ function toggleMenu(){
 }
 
 //Searching Bar
-function openPopup(){
-    let value = document.getElementById("searchInput").value;
-    if(value.trim()===""){
-        document.getElementById("popupText").innerText="Please type something cutie 😊";
-    } else {
-        document.getElementById("popupText").innerText="You searched for: " + value + "❤️";
-    }
-    document.getElementById("popup").style.display="flex";
+function showPopup(){
+
+let input = document.getElementById("searchInput").value;
+
+if(input.trim() !== ""){
+document.getElementById("popup").style.display="flex";
+}
+
 }
 
 function closePopup(){
-    document.getElementById("popup").style.display="none";
+document.getElementById("popup").style.display="none";
 }
 
 //Notification Banner 
