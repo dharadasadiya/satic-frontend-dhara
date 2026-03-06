@@ -130,9 +130,23 @@ form.addEventListener("submit", function(e) {
   submitBtn.disabled = true;
 });
 // Back To Top Button
-document.addEventListener("DOMContentLoaded", function(){
+window.addEventListener("DOMContentLoaded", function(){
 
 const topBtn = document.getElementById("topBtn");
 
 window.addEventListener("scroll", function(){
-  if(window.scrollY >
+  if(window.scrollY > 200){
+    topBtn.style.display = "block";
+  } else {
+    topBtn.style.display = "none";
+  }
+});
+
+topBtn.addEventListener("click", function(){
+  window.scrollTo({
+    top:0,
+    behavior:"smooth"
+  });
+});
+
+});
