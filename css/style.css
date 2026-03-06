@@ -623,7 +623,7 @@ color:#ccc;
   z-index: 900;
 }
 
-#backToTopBtn.show{
+#backToTopBtn{
   opacity: 1;
 }
 
