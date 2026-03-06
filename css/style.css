@@ -1,677 +1,213 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family: Arial, sans-serif;
-}
-
-body{
-    background:#f4f6f9;
-    display:flex;
-    flex-direction:column;
-    min-height:100vh;
-}
-
-/* ================= NAVBAR ================= */
-nav{
-    background:white;
-    padding:18px 8%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    box-shadow:0 3px 8px rgba(0,0,0,0.08);
-    position:relative;
-}
-
-.logo{
-    font-size:26px;
-    font-weight:bold;
-    color:#2d6fc2;
-}
-
-.nav-links{
-    display:flex;
-    align-items:center;
-    gap:25px;
-}
-
-.nav-links a{
-    margin-top: 1px;
-    text-decoration:none;
-    color:#333;
-    font-size:15px;
-}
-
-.nav-links a:hover{
-    color:#2d6fc2;
-}
-
-/* Searching Bar */
-.search-box{
-display:flex;
-gap:10px;
-}
-
-.search-box input{
-padding:9px;
-border-radius:5px;
-border:1px solid #ccc;
-}
-
-.search-box button{
-padding:5px 15px;
-font-size:12px;
-background:#3a6fb0;
-color:white;
-border:none;
-border-radius:5px;
-cursor:pointer;
-}
-
-.search-box button:hover{
-background:#2f5c94;
-}
-
-/* Popup */
-
-.popup{
-display:none;
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.4);
-justify-content:center;
-align-items:center;
-}
-
-.popup-content{
-background:white;
-padding:30px;
-border-radius:10px;
-text-align:center;
-width:300px;
-}
-
-.popup-content h3{
-margin-bottom:10px;
-}
-
-.popup-content button{
-margin-top:10px;
-padding:7px 15px;
-border:none;
-background:#3a6fb0;
-color:white;
-border-radius:5px;
-cursor:pointer;
-}
-
-/* Hamburger */
-.hamburger{
-    display:none;
-    flex-direction:column;
-    cursor:pointer;
-    gap:5px;
-}
-
-.hamburger span{
-    width:26px;
-    height:3px;
-    background:#333;
-}
-
-/* ================= HERO ================= */
-.hero{
-    padding:80px 8%;
-    text-align:center;
-    background:linear-gradient(to right,#9fb6cc,#d8e2ec);
-}
-
-.hero h1{
-    font-size:40px;
-    margin-bottom:15px;
-}
-
-.hero p{
-    font-size:16px;
-    color:#444;
-}
-
-/* === Notification Banner === */
-.notification-section{
-    width:100%;
-    display:flex;
-    justify-content:center;
-    padding:60px 20px;
-}
-
-.notification-box{
-    width:100%;
-    max-width:600px;
-    background:#ffffff;
-    padding:30px 20px;
-    border-radius:16px;
-    text-align:center;
-    box-shadow:0 10px 30px rgba(0,0,0,0.08);
-}
-
-.notification-box h2{
-    margin-bottom:30px;
-}
-
-/* Buttons */
-.notification-buttons{
-    display:flex;
-    justify-content:center;
-    gap:20px;
-    flex-wrap:wrap;
-}
-
-.btns{
-    padding:12px 24px;
-    border:none;
-    border-radius:8px;
-    cursor:pointer;
-    font-weight:600;
-    color:#fff;
-    transition:0.3s;
-    min-width:160px;
-}
-
-.success-btn{
-    background:linear-gradient(135deg,#28a745,#43d477);
-}
-
-.error-btn{
-    background:linear-gradient(135deg,#dc3545,#ff6b6b);
-}
-
-.btn:hover{
-    transform:translateY(-3px);
-    box-shadow:0 8px 20px rgba(0,0,0,0.15);
-}
-
-/* Notification Toast */
-.notification-container{
-    position:fixed;
-    top:20px;
-    right:20px;
-    display:flex;
-    flex-direction:column;
-    gap:12px;
-    z-index:1000;
-}
-
-.notification{
-    min-width:280px;
-    max-width:350px;
-    padding:15px 18px;
-    border-radius:10px;
-    color:#fff;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    box-shadow:0 8px 20px rgba(0,0,0,0.15);
-    animation:slideIn 0.4s ease forwards;
-}
-
-.notification.success{
-    background:linear-gradient(135deg,#28a745,#43d477);
-}
-
-.notification.error{
-    background:linear-gradient(135deg,#dc3545,#ff6b6b);
-}
-
-.close-btn{
-    background:none;
-    border:none;
-    color:#fff;
-    font-size:18px;
-    cursor:pointer;
-}
-
-/* Animation */
-@keyframes slideIn{
-    from{
-        transform:translateX(100%);
-        opacity:0;
-    }
-    to{
-        transform:translateX(0);
-        opacity:1;
-    }
-}
-
-/* ================= CARD SECTION ================= */
-.cards-section{
-    padding:60px 8%;
-    background:#eef2f7;
-}
-
-.cards-section h2{
-   
-    margin-bottom:40px;
-}
-
-.card-container{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:25px;
-}
-
-.card{
-    background:white;
-    border-radius:12px;
-    overflow:hidden;
-    box-shadow:0 5px 15px rgba(0,0,0,0.08);
-    transition:0.3s;
-}
-
-.card:hover{
-    transform:translateY(-5px);
-}
-
-.card img{
-    width:100%;
-    height:180px;
-    object-fit:cover;
-}
-
-.card-content{
-    padding:20px;
-}
-
-.card-content h3{
-    margin-bottom:10px;
-}
-
-.card-content p{
-    font-size:14px;
-    color:#555;
-    margin-bottom:15px;
-}
-
-/* Contact Me Form */
-.containers {
-  width: 100%;
-  max-width: 450px;
-  padding: 15px;
-}
-
-form {
-  justify-content: center;
-  align-items: center;
-  background: #fff;
-  padding: 25px;
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-}
-
-.heading {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #333;
-}
-
-.form-group {
-  margin-bottom: 15px;
-}
-
-label {
-  font-weight: 600;
-  display: block;
-  margin-bottom: 5px;
-}
-
-input, textarea {
-  width: 100%;
-  padding: 10px;
-  border-radius: 6px;
-  border: 2px solid #ccc;
-  outline: none;
-  transition: 0.3s;
-}
-
-input:focus, textarea:focus {
-  border-color: #667eea;
-}
-
-.error-msg {
-  color: red;
-  font-size: 12px;
-}
-
-.success {
-  border-color: green !important;
-}
-
-.error-border {
-  border-color: red !important;
-}
-
-button {
-  width: 100%;
-  padding: 12px;
-  border: none;
-  border-radius: 6px;
-  background: #667eea;
-  color: white;
-  font-size: 16px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-button:disabled {
-  background: #aaa;
-  cursor: not-allowed;
-}
-
-button:hover:not(:disabled) {
-  background: #5a67d8;
-}
-
-/* ================= BUTTON COMPONENT SECTION ================= */
-.buttons-section{
-    padding:60px 8%;
-}
-
-.buttons-section h2{
-    margin-bottom:30px;
-}
-
-.button-row{
-    display:flex;
-    align-items:center;
-    gap:20px;
-    flex-wrap:wrap;
-    margin-bottom:25px;
-}
-
-.label{
-    width:220px;
-}
-
-/* Common Button */
-.btn{
-    padding:10px 22px;
-    border-radius:8px;
-    font-size:14px;
-    cursor:pointer;
-    transition:0.3s ease;
-    min-width:110px;
-}
-
-/* Primary */
-.btn-primary{
-    background:linear-gradient(to bottom,#4b8edb,#2d6fc2);
-    border:none;
-    color:white;
-}
-
-.btn-primary:hover{
-    background:linear-gradient(to bottom,#3f7fcd,#245fae);
-}
-
-.btn-primary:active{
-    transform:scale(0.95);
-}
-
-.btn-primary:disabled{
-    background:#b5b5b5;
-    cursor:not-allowed;
-}
-
-/* Outline */
-.btn-outline{
-    background:white;
-    border:2px solid #2d6fc2;
-    color:#2d6fc2;
-}
-
-.btn-outline:hover{
-    background:#2d6fc2;
-    color:white;
-}
-
-.btn-outline:active{
-    transform:scale(0.95);
-}
-
-.btn-outline:disabled{
-    border:2px solid #b5b5b5;
-    color:#b5b5b5;
-    background:#f5f5f5;
-    cursor:not-allowed;
-}
-
-/* ================= FOOTER ================= */
-.site-footer{
-background:linear-gradient(135deg,#1f3c5a,#2b5876,#1e3c72);
-color:white;
-padding:50px 20px 20px;
-}
-
-.footer-wrapper{
-max-width:1100px;
-margin:auto;
-display:flex;
-justify-content:space-between;
-flex-wrap:wrap;
-gap:30px;
-}
-
-.footer-col{
-flex:1;
-min-width:200px;
-}
-
-.footer-title{
-font-size:26px;
-margin-bottom:10px;
-}
-
-.footer-col p{
-color:#dcdcdc;
-font-size:14px;
-}
-
-.footer-col h3{
-margin-bottom:12px;
-font-size:18px;
-}
-
-.footer-col ul{
-list-style:none;
-}
-
-.footer-col li{
-margin-bottom:10px;
-}
-
-.footer-col a{
-text-decoration:none;
-color:white;
-font-size:14px;
-transition:0.3s;
-}
-
-.footer-col a:hover{
-color:#00eaff;
-padding-left:6px;
-}
-
-/* Bottom line */
-
-.footer-bottom{
-text-align:center;
-margin-top:35px;
-padding-top:15px;
-border-top:1px solid rgba(255,255,255,0.2);
-font-size:13px;
-color:#ccc;
-}
-
-/* Go-to-top button */
-#topBtn{
-position: fixed;
-bottom: 30px;
-right: 30px;
-height: 55px;
-width: 55px;
-border: none;
-border-radius: 50%;
-background: #3b6db3;
-color: white;
-font-size: 22px;
-cursor: pointer;
-box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
-display: none;
-}
-
-#topBtn:hover{
-background: #2c5691;
-}
-
-/* ================= POPUP MODAL ================= */
-.modal{
-    display:none;
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    background:rgba(0,0,0,0.4);
-    justify-content:center;
-    align-items:center;
-}
-
-.modal-content{
-    background:white;
-    padding:25px;
-    border-radius:12px;
-    text-align:center;
-    width:90%;
-    max-width:350px;
-    animation:pop 0.3s ease;
-}
-
-.modal-content h3{
-    margin-bottom:10px;
-}
-
-.modal-content button{
-    margin-top:15px;
-    padding:6px 15px;
-    border:none;
-    background:#2d6fc2;
-    color:white;
-    border-radius:5px;
-    cursor:pointer;
-}
-
-@keyframes pop{
-    from{transform:scale(0.8);}
-    to{transform:scale(1);}
-}
-
-/* ================= MOBILE ================= */
-@media(max-width:900px){
-
-    .nav-links{
-        position:absolute;
-        top:75px;
-        right:0;
-        background:white;
-        width:100%;
-        flex-direction:column;
-        gap:20px;
-        padding:20px 0;
-        display:none;
-    }
-
-    .nav-links.active{
-        display:flex;
-    }
-
-    .search-box{
-        width:100%;
-        justify-content:center;
-    }
-
-    .search-box input{
-        width:60%;
-    }
-
-    .hamburger{
-        display:flex;
-    }
-
-    .hero h1{
-        font-size:26px;
-    }
-
-    .button-row{
-        flex-direction:column;
-        align-items:flex-start;
-    }
-
-    .label{
-        width:100%;
-    }
-
-    .btn{
-        width:100%;
-    }
-
-     .card-container{
-        grid-template-columns:1fr;
-    }
-
-     .notification-section{
-        padding:40px 15px;
-    }
-
-    .notification-box{
-        padding:30px 20px;
-    }
-
-    .notification-buttons{
-        flex-direction:column;
-        gap:15px;
-    }
-
-    .btns{
-        width:100%;
-    }
-
-    .notification-container{
-        right:10px;
-        left:10px;
-        top:15px;
-    }
-
-    .notification{
-        min-width:100%;
-        max-width:100%;
-    }
-
-    form {
-    padding: 18px;
-  }
-
-   .heading {
-    font-size: 20px;
-  }
-
-   .footer-wrapper{
-     flex-direction:column;
-     text-align:left;
-  }
-
-   .footer-col{
-     margin-bottom:20px;
-  }   
-}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Frontend Journey</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Font -->
+    <link href="https://fonts.google.com/specimen/Playfair+Display" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav>
+    <div class="logo">LOGO</div>
+
+    <div class="nav-links" id="navLinks">
+        <a href="#">Home</a>
+        <a href="#">Project</a>
+        <a href="#">Internship</a>
+        <a href="#">Contact</a>
+
+    <!-- Searching Bar -->
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Search...">
+            <button class="search" onclick="showPopup()">Search</button>
+        </div>
+
+    <!-- Popup -->
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <h3>😊 Thank You!</h3>
+            <p>Your search has been submitted.</p>
+            <button class="close" onclick="closePopup()">Close</button>
+        </div>
+    </div>
+    </div>
+
+    <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+    <h1>Front-End Developer Internship</h1>
+    <p>Learning, building and improving frontend skills every day 🚀</p>
+    <p>Setup & Deployment(Completed)</p>
+</section> <br><br>
+
+<!-- Notification Banner -->
+<section class="notification-section">
+    <div class="notification-box">
+        <h2>Notification Playground</h2>
+
+        <div class="notification-buttons">
+            <button class="btns success-btn" id="successBtn">
+                Trigger Success
+            </button>
+
+            <button class="btns error-btn" id="errorBtn">
+                Trigger Error
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- Notification Container -->
+<div class="notification-container" id="notificationContainer"></div>
+
+<!-- Contact me Form -->
+  <div class="containers">
+    <form id="contactForm" novalidate>
+      <h2 class="heading">Contact Me</h2>
+
+      <!-- Name -->
+      <div class="form-group">
+        <label>Name:</label>
+        <input type="text" id="name" placeholder="Enter your name">
+        <small class="error-msg" id="nameError"></small>
+      </div>
+
+      <!-- Email -->
+      <div class="form-group">
+        <label>Email:</label>
+        <input type="email" id="email" placeholder="unnatipitla1026@gmail.com">
+        <small class="error-msg" id="emailError"></small>
+      </div>
+
+      <!-- Message -->
+      <div class="form-group">
+        <label>Message:</label>
+        <textarea id="message" rows="4" placeholder="Write your message..."></textarea>
+        <small class="error-msg" id="messageError"></small>
+      </div>
+
+      <button type="submit" id="submitBtn" disabled>Send Message</button>
+    </form>
+  </div>
+    
+
+<!-- CARD SECTION -->
+<section class="cards-section">
+    <h2>Our Learning Modules</h2>
+
+    <div class="card-container">
+
+        <div class="card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR09YghRMRs2tdvkaz9QbIPxAAJVrgqMY4QIA&s">
+            <div class="card-content">
+                <h3>HTML Basics</h3>
+                <p>Learn structure of webpages and semantic elements.</p>
+                <button class="btn btn-primary">Explore</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFmjt9vXR1O9iMUY-heqmfLmNQpuFLvrAKow&s">
+            <div class="card-content">
+                <h3>CSS Styling</h3>
+                <p>Design responsive and beautiful user interfaces.</p>
+                <button class="btn btn-primary">Explore</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://bairesdev.mo.cloudinary.net/blog/2023/08/What-Is-JavaScript-Used-For.jpg">
+            <div class="card-content">
+                <h3>JavaScript</h3>
+                <p>Add interactivity and dynamic behavior to websites.</p>
+                <button class="btn btn-primary">Explore</button>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- BUTTON SECTION -->
+<section class="buttons-section">
+    <h2>Button Component System</h2>
+
+    <div class="button-row">
+        <div class="label">Primary Buttons</div>
+        <button class="btn btn-primary">Default</button>
+        <button class="btn btn-primary">Hover</button>
+        <button class="btn btn-primary">Active</button>
+        <button class="btn btn-primary" disabled>Disabled</button>
+    </div>
+
+    <div class="button-row">
+        <div class="label">Secondary Buttons</div>
+        <button class="btn btn-outline">Default</button>
+        <button class="btn btn-outline">Hover</button>
+        <button class="btn btn-outline">Active</button>
+        <button class="btn btn-outline" disabled>Disabled</button>
+    </div>
+</section>
+
+<!-- POPUP -->
+<div class="modal" id="popup">
+    <div class="modal-content">
+        <h3>✨ Cute Search Message ✨</h3>
+        <p id="popupText"></p>
+        <button onclick="closePopup()">Close</button>
+    </div>
+</div>
+
+<!--  Footer -->
+<footer class="site-footer">
+  <div class="footer-wrapper">
+
+    <div class="footer-col footer-about">
+      <h2 class="footer-title">LOGO</h2>
+      <p>Frontend Developer. Building cool things.</p>
+    </div>
+
+    <div class="footer-col">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Internship</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h3>Socials</h3>
+      <ul>
+        <li><a href="#">GitHub</a></li>
+        <li><a href="#">LinkedIn</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 LOGO | All Rights Reserved</p>
+  </div>
+</footer>
+
+<button id="topBtn" onclick="goTop()">↑</button>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>
