@@ -130,21 +130,25 @@ form.addEventListener("submit", function(e) {
   form.reset();
   submitBtn.disabled = true;
 });
-
 // Go-to-top button
+
+window.addEventListener("load", function(){
+
 let btn = document.getElementById("topBtn");
 
-window.onscroll = function() {
-if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-btn.style.display = "block";
-} else {
-btn.style.display = "none";
+window.onscroll = function(){
+if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200){
+btn.style.display="block";
+}else{
+btn.style.display="none";
 }
 };
 
+});
+
 function goTop(){
 window.scrollTo({
-top: 0,
-behavior: "smooth"
+top:0,
+behavior:"smooth"
 });
 }
