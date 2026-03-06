@@ -3,148 +3,136 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dhara Dasadiya</title>
 
-<title>Frontend Development Internship</title>
+<link rel="stylesheet" href="style.css">
 
 <style>
 
-body{
-font-family: Arial, sans-serif;
-margin:0;
-padding:0;
-background:#f5f5f5;
-}
-
-header{
-background:#222;
-color:white;
-padding:20px;
-text-align:center;
-}
-
-nav{
-background:#444;
-padding:10px;
-text-align:center;
-}
-
-nav a{
-color:white;
-margin:0 15px;
-text-decoration:none;
-font-weight:bold;
-}
-
-section{
-padding:40px;
-max-width:900px;
-margin:auto;
-background:white;
-margin-top:20px;
-border-radius:8px;
-}
-
-h2{
-color:#333;
-}
-
-footer{
-text-align:center;
-padding:20px;
-background:#222;
-color:white;
-margin-top:40px;
-}
-
 /* Back to Top Button */
 
-#backToTop{
+#topBtn{
 position:fixed;
 bottom:30px;
 right:30px;
-background:#ff6600;
+background:#2a5298;
 color:white;
 border:none;
-width:50px;
-height:50px;
-font-size:22px;
+width:45px;
+height:45px;
 border-radius:50%;
+font-size:20px;
 cursor:pointer;
 display:none;
-box-shadow:0 4px 10px rgba(0,0,0,0.2);
-}
-
-#backToTop:hover{
-background:#e65c00;
+box-shadow:0 4px 10px rgba(0,0,0,0.3);
 }
 
 </style>
+
 </head>
 
 <body>
 
-<header>
-<h1>Frontend Development Internship</h1>
-<p>Dhara Dasadiya</p>
-<p>dharadasadiya64@gmail.com</p>
-</header>
+<!-- Navbar -->
 
 <nav>
-<a href="#about">About</a>
-<a href="#tasks">Tasks</a>
-<a href="#contact">Contact</a>
+<h2>Dhara Dasadiya</h2>
+
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
 </nav>
 
-<section id="about">
-<h2>About</h2>
+<!-- About Section -->
+
+<section id="home">
+
+<h2>About Me</h2>
+
 <p>
-This website is part of my frontend development internship tasks.
-Here I will upload daily assignments and projects.
+I am Dhara Dasadiya, a frontend developer learning to build modern websites using HTML, CSS and JavaScript.
 </p>
-</section>
-
-<section id="tasks">
-<h2>Daily Tasks</h2>
-
-<p>Day 1 – Introduction to HTML</p>
-<p>Day 2 – HTML Structure</p>
-<p>Day 3 – CSS Basics</p>
-<p>Day 4 – Layout Design</p>
-<p>Day 5 – Responsive Design</p>
-<p>Day 6 – JavaScript Basics</p>
-<p>Day 7 – DOM Manipulation</p>
-<p>Day 8 – Form Validation</p>
-<p>Day 9 – Search Feature</p>
-<p>Day 10 – Back to Top Button</p>
 
 </section>
+
+<!-- Projects -->
+
+<section id="projects">
+
+<h2>Projects</h2>
+<p>My internship tasks and projects will appear here.</p>
+
+</section>
+
+<!-- Contact -->
 
 <section id="contact">
+
 <h2>Contact</h2>
+
 <p>Email: dharadasadiya64@gmail.com</p>
+
 </section>
 
+<!-- Footer -->
+
 <footer>
-<p>© 2026 Dhara Dasadiya | Frontend Internship</p>
+
+<div>
+
+<h3>Dhara Dasadiya</h3>
+<p>Frontend Developer. Building cool things.</p>
+
+</div>
+
+<div>
+
+<h3>Quick Links</h3>
+
+<ul>
+<li>Home</li>
+<li>Projects</li>
+<li>Contact</li>
+
+</ul>
+
+</div>
+
+<div>
+
+<h3>Socials</h3>
+
+<ul>
+<li>GitHub</li>
+<li>LinkedIn</li>
+</ul>
+
+</div>
+
 </footer>
 
-<button id="backToTop">↑</button>
+<!-- Back To Top Button -->
+
+<button id="topBtn">↑</button>
 
 <script>
 
-let btn = document.getElementById("backToTop");
+let topBtn = document.getElementById("topBtn");
 
 window.onscroll = function(){
 
 if(document.body.scrollTop > 200 || document.documentElement.scrollTop > 200){
-btn.style.display="block";
+topBtn.style.display = "block";
 }else{
-btn.style.display="none";
+topBtn.style.display = "none";
 }
 
 };
 
-btn.onclick=function(){
+topBtn.onclick = function(){
 
 window.scrollTo({
 top:0,
