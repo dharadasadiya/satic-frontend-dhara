@@ -132,7 +132,8 @@ form.addEventListener("submit", function(e) {
 // Back To Top Button
 window.addEventListener("DOMContentLoaded", function(){
 
-const topBtn = document.getElementById("topBtn");
+topBtn.style.display="block";
+    topBtn.coclick=function(){...}
 
 window.addEventListener("scroll", function(){
   if(window.scrollY > 200){
