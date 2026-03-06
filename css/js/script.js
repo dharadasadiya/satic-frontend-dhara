@@ -130,16 +130,9 @@ form.addEventListener("submit", function(e) {
   submitBtn.disabled = true;
 });
 // Back To Top Button
+document.addEventListener("DOMContentLoaded", function(){
+
 const topBtn = document.getElementById("topBtn");
 
-window.onscroll = function () {
-  if (document.documentElement.scrollTop > 200) {
-    topBtn.style.display = "block";
-  } else {
-    topBtn.style.display = "none";
-  }
-};
-
-topBtn.onclick = function () {
-  document.documentElement.scrollTop = 0;
-};
+window.addEventListener("scroll", function(){
+  if(window.scrollY >
