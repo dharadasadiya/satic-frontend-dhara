@@ -129,3 +129,23 @@ form.addEventListener("submit", function(e) {
   form.reset();
   submitBtn.disabled = true;
 });
+const btn = document.getElementById("backToTopBtn");
+
+window.addEventListener("scroll", function(){
+
+  if(window.scrollY > 500){
+    btn.classList.add("show");
+  }else{
+    btn.classList.remove("show");
+  }
+
+});
+
+btn.addEventListener("click", function(){
+
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+
+});
