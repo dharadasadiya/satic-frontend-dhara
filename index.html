@@ -1,200 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>My Frontend Journey</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>My Frontend Journey</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Google Font -->
-    <link href="https://fonts.google.com/specimen/Playfair+Display" rel="stylesheet">
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
 <!-- NAVBAR -->
 <nav>
-    <div class="logo">LOGO</div>
+<div class="logo">LOGO</div>
 
-    <div class="nav-links" id="navLinks">
-        <a href="#">Home</a>
-        <a href="#">Project</a>
-        <a href="#">Internship</a>
-        <a href="#">Contact</a>
+<div class="nav-links" id="navLinks">
+<a href="#">Home</a>
+<a href="#">Project</a>
+<a href="#">Internship</a>
+<a href="#">Contact</a>
 
-        <div class="search-box">
-            <input type="text" id="searchInput" placeholder="Search...">
-            <button onclick="openPopup()">Search</button>
-        </div>
-    </div>
+<div class="search-box">
+<input type="text" id="searchInput" placeholder="Search...">
+<button onclick="openPopup()">Search</button>
+</div>
+</div>
 
-    <div class="hamburger" onclick="toggleMenu()">
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
+<div class="hamburger" onclick="toggleMenu()">
+<span></span>
+<span></span>
+<span></span>
+</div>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
-    <h1>Front-End Developer Internship</h1>
-    <p>Learning, building and improving frontend skills every day 🚀</p>
-    <p>Setup & Deployment(Completed)</p>
-</section> <br><br>
+<h1>Front-End Developer Internship</h1>
+<p>Learning, building and improving frontend skills every day 🚀</p>
+<p>Setup & Deployment(Completed)</p>
+</section>
 
-<!-- Notification Banner -->
+<!-- Notification -->
 <section class="notification-section">
-    <div class="notification-box">
-        <h2>Notification Playground</h2>
+<div class="notification-box">
+<h2>Notification Playground</h2>
 
-        <div class="notification-buttons">
-            <button class="btns success-btn" id="successBtn">
-                Trigger Success
-            </button>
+<div class="notification-buttons">
+<button class="btns success-btn" id="successBtn">
+Trigger Success
+</button>
 
-            <button class="btns error-btn" id="errorBtn">
-                Trigger Error
-            </button>
-        </div>
-    </div>
-</section>
-
-<!-- Notification Container -->
-<div class="notification-container" id="notificationContainer"></div>
-
-<!-- Contact me Form -->
-  <div class="containers">
-    <form id="contactForm" novalidate>
-      <h2 class="heading">Contact Me</h2>
-
-      <!-- Name -->
-      <div class="form-group">
-        <label>Name:</label>
-        <input type="text" id="name" placeholder="Enter your name">
-        <small class="error-msg" id="nameError"></small>
-      </div>
-
-      <!-- Email -->
-      <div class="form-group">
-        <label>Email:</label>
-        <input type="email" id="email" placeholder="dharadasadiya64@gmail.com">
-        <small class="error-msg" id="emailError"></small>
-      </div>
-
-      <!-- Message -->
-      <div class="form-group">
-        <label>Message:</label>
-        <textarea id="message" rows="4" placeholder="Write your message..."></textarea>
-        <small class="error-msg" id="messageError"></small>
-      </div>
-
-      <button type="submit" id="submitBtn" disabled>Send Message</button>
-    </form>
-  </div>
-    
-
-<!-- CARD SECTION -->
-<section class="cards-section">
-    <h2>Our Learning Modules</h2>
-
-    <div class="card-container">
-
-        <div class="card">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR09YghRMRs2tdvkaz9QbIPxAAJVrgqMY4QIA&s">
-            <div class="card-content">
-                <h3>HTML Basics</h3>
-                <p>Learn structure of webpages and semantic elements.</p>
-                <button class="btn btn-primary">Explore</button>
-            </div>
-        </div>
-
-        <div class="card">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFmjt9vXR1O9iMUY-heqmfLmNQpuFLvrAKow&s">
-            <div class="card-content">
-                <h3>CSS Styling</h3>
-                <p>Design responsive and beautiful user interfaces.</p>
-                <button class="btn btn-primary">Explore</button>
-            </div>
-        </div>
-
-        <div class="card">
-            <img src="https://bairesdev.mo.cloudinary.net/blog/2023/08/What-Is-JavaScript-Used-For.jpg">
-            <div class="card-content">
-                <h3>JavaScript</h3>
-                <p>Add interactivity and dynamic behavior to websites.</p>
-                <button class="btn btn-primary">Explore</button>
-            </div>
-        </div>
-
-    </div>
-</section>
-
-<!-- BUTTON SECTION -->
-<section class="buttons-section">
-    <h2>Button Component System</h2>
-
-    <div class="button-row">
-        <div class="label">Primary Buttons</div>
-        <button class="btn btn-primary">Default</button>
-        <button class="btn btn-primary">Hover</button>
-        <button class="btn btn-primary">Active</button>
-        <button class="btn btn-primary" disabled>Disabled</button>
-    </div>
-
-    <div class="button-row">
-        <div class="label">Secondary Buttons</div>
-        <button class="btn btn-outline">Default</button>
-        <button class="btn btn-outline">Hover</button>
-        <button class="btn btn-outline">Active</button>
-        <button class="btn btn-outline" disabled>Disabled</button>
-    </div>
-</section>
-
-<!-- POPUP -->
-<div class="modal" id="popup">
-    <div class="modal-content">
-        <h3>✨ different Search Message ✨</h3>
-        <p id="popupText"></p>
-        <button onclick="closePopup()">Close</button>
-    </div>
+<button class="btns error-btn" id="errorBtn">
+Trigger Error
+</button>
 </div>
 
-<!--  Footer -->
+</div>
+</section>
+
+<div class="notification-container" id="notificationContainer"></div>
+
+<!-- Contact Form -->
+<div class="containers">
+
+<form id="contactForm">
+
+<h2 class="heading">Contact Me</h2>
+
+<div class="form-group">
+<label>Name:</label>
+<input type="text" id="name">
+<small id="nameError"></small>
+</div>
+
+<div class="form-group">
+<label>Email:</label>
+<input type="email" id="email">
+<small id="emailError"></small>
+</div>
+
+<div class="form-group">
+<label>Message:</label>
+<textarea id="message"></textarea>
+<small id="messageError"></small>
+</div>
+
+<button type="submit" id="submitBtn" disabled>Send Message</button>
+
+</form>
+
+</div>
+
+<!-- FOOTER -->
 <footer class="site-footer">
-  <div class="footer-wrapper">
 
-    <div class="footer-col footer-about">
-      <h2 class="footer-title">LOGO</h2>
-      <p>Frontend Developer. Building cool things.</p>
-    </div>
+<div class="footer-wrapper">
 
-    <div class="footer-col">
-      <h3>Quick Links</h3>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Projects</a></li>
-        <li><a href="#">Internship</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </div>
+<div class="footer-col footer-about">
+<h2 class="footer-title">LOGO</h2>
+<p>Frontend Developer. Building cool things.</p>
+</div>
 
-    <div class="footer-col">
-      <h3>Socials</h3>
-      <ul>
-        <li><a href="#">GitHub</a></li>
-        <li><a href="#">LinkedIn</a></li>
-      </ul>
-    </div>
+<div class="footer-col">
+<h3>Quick Links</h3>
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#">Projects</a></li>
+<li><a href="#">Internship</a></li>
+<li><a href="#">Contact</a></li>
+</ul>
+</div>
 
-  </div>
+<div class="footer-col">
+<h3>Socials</h3>
+<ul>
+<li><a href="#">GitHub</a></li>
+<li><a href="#">LinkedIn</a></li>
+</ul>
+</div>
 
-  <div class="footer-bottom">
-    <p>© 2026 LOGO | All Rights Reserved</p>
-  </div>
+</div>
+
+<div class="footer-bottom">
+<p>© 2026 LOGO | All Rights Reserved</p>
+</div>
+
 </footer>
-  <button id="topBtn">↑</button>
-  
-  <script src="js/script.js"></script>
+
+<!-- BACK TO TOP BUTTON -->
+<button id="topBtn">↑</button>
+
+<script src="js/script.js"></script>
+
 </body>
 </html>
